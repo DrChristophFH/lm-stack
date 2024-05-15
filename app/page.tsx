@@ -5,7 +5,6 @@ import Image from "next/image"
 import {
   ArrowUpRight,
   BotMessageSquare,
-  Package2,
   Search,
 } from "lucide-react"
 
@@ -34,11 +33,22 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import React, { useState } from "react"
-import { Title } from "@radix-ui/react-dialog"
+import React, { useEffect, useState } from "react"
+import { LLM } from "@/lib/types/llm"
 
 export default function Dashboard() {
-  const [progress, setProgress] = useState(0);
+  const [llms, setLLMs] = useState<LLM[]>([]);
+
+  useEffect(() => {
+    const fetchLLMs = async () => {
+      const response = await fetch('generated/llms.json');
+      console.log(response);
+      const data: LLM[] = await response.json();
+      setLLMs(data);
+    };
+
+    fetchLLMs();
+  }, [])
 
   return (
     <div className="flex min-h-screen w-full flex-col">

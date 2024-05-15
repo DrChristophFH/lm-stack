@@ -18,11 +18,11 @@ async function buildLLMJson() {
       llms.push(JSON.parse(fileData));
     }
 
-    const outputPath = join(process.cwd(), 'generated', 'llms.json');
+    const outputPath = join(process.cwd(), 'public/generated', 'llms.json');
 
-    if (!existsSync(join(process.cwd(), 'generated'))) {
+    if (!existsSync(join(process.cwd(), 'public/generated'))) {
       console.log('Creating generated directory...');
-      await promises.mkdir(join(process.cwd(), 'generated'));
+      await promises.mkdir(join(process.cwd(), 'public/generated'));
     }
 
     writeFileSync(outputPath, JSON.stringify(llms, null, 2), 'utf8');
