@@ -6,7 +6,7 @@ import icon from "./favicon.svg";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "LM-Stack",
+  title: "lm-stack",
   description: "A collection of language models and their insights",
 };
 
