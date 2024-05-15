@@ -1,0 +1,8 @@
+[
+  {
+    "id": "layer-wise-scaling",
+    "name": "Layer-wise Scaling",
+    "description": "Non-uniform allocation of parameters in the transformer layer. Adjusted number of attention heads and FFN multiplier in each transformer layer.",
+    "url": "https://arxiv.org/pdf/2404.14619"
+  }
+]
