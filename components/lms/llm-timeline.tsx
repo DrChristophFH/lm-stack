@@ -4,6 +4,9 @@ import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
 import { LLM } from "@/lib/types/llm"
 import React from "react";
+import { RotateCcw } from "lucide-react";
+import { Button } from "../ui/button";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 
 interface Props {
   llms: LLM[];
@@ -11,6 +14,7 @@ interface Props {
 
 const LlmTimeline: React.FC<Props> = ({ llms }) => {
   const container = useRef(null);
+  let timeline: Timeline;
 
   const items: any = llms.map((llm) => {
     let html = document.createElement("div");
@@ -46,15 +50,33 @@ const LlmTimeline: React.FC<Props> = ({ llms }) => {
   useEffect(() => {
     if (!container.current) return;
 
-    const timeline = new Timeline(container.current, items, options);
+    timeline = new Timeline(container.current, items, options);
 
     return () => {
       timeline.destroy();
     };
   }, [container, items, options]);
 
+  const handleReset = () => {
+    timeline.setWindow(options.start, options.end);
+  };
+
   return (
-    <div ref={container}></div>
+    <div style={{ position: "relative" }}>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button variant="outline" size="icon" style={{ position: "absolute", top: "0.5em", right: "0.5em", zIndex: 5 }} onClick={handleReset}>
+              <RotateCcw className="h-4 w-4" />
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent style={{ zIndex: 5 }}>
+            <p>Reset Zoom</p>
+          </TooltipContent>
+        </Tooltip>
+      </TooltipProvider>
+      <div ref={container}></div>
+    </div>
   );
 }
 
