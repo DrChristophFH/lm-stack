@@ -1,9 +1,41 @@
 [
   {
+    "id": "apple/OpenELM-3B",
+    "name": "OpenELM-3B",
+    "release_date": "2024-04-22",
+    "from": "apple",
+    "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
+    "model": {
+      "architecture": "transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        {
+          "id": "layer-wise-scaling"
+        }
+      ],
+      "parameters": "3B",
+      "active_parameters": "3B",
+      "context_size": "2048",
+      "tokenizer": "sentencepiece",
+      "hidden_size": "3072",
+      "vocab_size": "32000",
+      "positional_embedding": "rope",
+      "attention_variant": "grouped query attention",
+      "activation": "swiglu"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-3B/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-3B",
+    "paper": "https://arxiv.org/pdf/2404.14619"
+  },
+  {
     "id": "apple/OpenELM-270M",
     "name": "OpenELM-270M",
-    "release_date": "22.04.2024",
-    "from": "Apple",
+    "release_date": "2024-04-22",
+    "from": "apple",
     "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
     "model": {
       "architecture": "transformer",
