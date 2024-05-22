@@ -50,6 +50,10 @@ export default function Dashboard() {
     fetchLLMs();
   }, [])
 
+  let selectCallback = (llm: LLM) => {
+    setSelectedLLM(llm);
+  }
+
   return (
     <div className="flex min-h-screen w-full flex-col">
       <Header></Header>
@@ -61,7 +65,7 @@ export default function Dashboard() {
               <BotMessageSquare />
             </CardHeader>
             <CardContent>
-              <LlmTimeline llms={llms} />
+              <LlmTimeline llms={llms} selectCallback={selectCallback}/>
             </CardContent>
           </Card>
         </div>

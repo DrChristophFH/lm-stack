@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Timeline } from "vis-timeline/esnext";
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
@@ -10,11 +10,12 @@ import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/
 
 interface Props {
   llms: LLM[];
+  selectCallback: (llm: LLM) => void;
 }
 
-const LlmTimeline: React.FC<Props> = ({ llms }) => {
+const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
   const container = useRef(null);
-  let timeline: Timeline;
+  const [timeline, setTimeline] = useState<Timeline | null>(null);
 
   const items: any = llms.map((llm) => {
     let html = document.createElement("div");
@@ -46,19 +47,30 @@ const LlmTimeline: React.FC<Props> = ({ llms }) => {
     start: new Date("2022-01-01"),
     end: now.setDate(now.getDate() + 30), // today + 30 days
   };
-
+  
   useEffect(() => {
     if (!container.current) return;
+    
+    let newTimeline = new Timeline(container.current, items, options);
 
-    timeline = new Timeline(container.current, items, options);
+    setTimeline(newTimeline);
+
+    newTimeline.on("click", function (properties) {
+      let item = properties.item;
+      if (item) {
+        let llm = llms.find((llm) => llm.id === item);
+        if (!llm) return;
+        selectCallback(llm);
+      }
+    });
 
     return () => {
-      timeline.destroy();
+      newTimeline.destroy();
     };
-  }, [container, items, options]);
+  }, [container, llms]);
 
   const handleReset = () => {
-    timeline.setWindow(options.start, options.end);
+    timeline?.setWindow(options.start, options.end);
   };
 
   return (
