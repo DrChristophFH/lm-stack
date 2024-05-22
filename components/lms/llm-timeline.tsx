@@ -31,6 +31,8 @@ const LlmTimeline: React.FC<Props> = ({ llms }) => {
     });
   });
 
+  let now = new Date(); // today
+
   const options = {
     stack: true,
     showMajorLabels: true,
@@ -38,7 +40,7 @@ const LlmTimeline: React.FC<Props> = ({ llms }) => {
     maxMinorChars: 4,
     minHeight: "400px",
     start: new Date("2022-01-01"),
-    end: new Date(), // today
+    end: now.setDate(now.getDate() + 30), // today + 30 days
   };
 
   useEffect(() => {
