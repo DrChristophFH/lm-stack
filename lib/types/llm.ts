@@ -33,4 +33,5 @@ export interface LLM {
   license_url: string;
   download: string;
   paper: string;
+  updated: string;
 }
