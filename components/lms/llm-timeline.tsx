@@ -38,10 +38,11 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
 
   let now = new Date(); // today
 
-  const options = {
+  const options: any = {
     stack: true,
     showMajorLabels: true,
     showMinorLabels: true,
+    zoomKey: "ctrlKey",
     maxMinorChars: 4,
     minHeight: "400px",
     start: new Date("2022-01-01"),
