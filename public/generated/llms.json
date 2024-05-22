@@ -29,7 +29,8 @@
     "license": "Apple-sample-code-license",
     "license_url": "https://huggingface.co/apple/OpenELM-3B/blob/main/LICENSE",
     "download": "https://huggingface.co/apple/OpenELM-3B",
-    "paper": "https://arxiv.org/pdf/2404.14619"
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "updated": "2024-05-22"
   },
   {
     "id": "apple/OpenELM-270M",
@@ -61,6 +62,7 @@
     "license": "Apple-sample-code-license",
     "license_url": "https://huggingface.co/apple/OpenELM-270M/blob/main/LICENSE",
     "download": "https://huggingface.co/apple/OpenELM-270M",
-    "paper": "https://arxiv.org/pdf/2404.14619"
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "updated": "2024-05-22"
   }
 ]

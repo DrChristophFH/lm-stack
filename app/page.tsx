@@ -4,6 +4,7 @@ import Link from "next/link"
 import {
   ArrowUpRight,
   BotMessageSquare,
+  Copy,
   RotateCcw,
 } from "lucide-react"
 
@@ -34,6 +35,7 @@ import { LLM } from "@/lib/types/llm"
 import { Header } from "@/components/lms/header"
 import LlmTimeline from "@/components/lms/llm-timeline"
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@radix-ui/react-tooltip"
+import ModelCard from "@/components/lms/model-card"
 
 
 export default function Dashboard() {
@@ -65,7 +67,7 @@ export default function Dashboard() {
               <BotMessageSquare />
             </CardHeader>
             <CardContent>
-              <LlmTimeline llms={llms} selectCallback={selectCallback}/>
+              <LlmTimeline llms={llms} selectCallback={selectCallback} />
             </CardContent>
           </Card>
         </div>
@@ -89,13 +91,7 @@ export default function Dashboard() {
 
             </CardContent>
           </Card>
-          <Card x-chunk="dashboard-01-chunk-5">
-            <CardHeader>
-              <CardTitle>Recent Sales</CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-8">
-            </CardContent>
-          </Card>
+          <ModelCard llm={selectedLLM}/>
         </div>
       </main>
     </div>
