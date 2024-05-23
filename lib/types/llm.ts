@@ -23,12 +23,18 @@ export interface Bonus {
   url: string;
 }
 
+export interface Readme {
+  raw?: string;
+  url?: string;
+}
+
 export interface LLM {
   id: string;
   name: string;
   release_date: string;
   from: string;
   description: string;
+  readme?: Readme;
   model: Model;
   training: Training;
   license: string;

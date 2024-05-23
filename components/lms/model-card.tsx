@@ -1,12 +1,8 @@
 import {
-  ChevronLeft,
-  ChevronRight,
   Copy,
-  CreditCard,
   Download,
   GraduationCap,
   MoreVertical,
-  Truck,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -25,11 +21,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-} from "@/components/ui/pagination"
 import { Separator } from "@/components/ui/separator"
 import { LLM } from "@/lib/types/llm"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
@@ -44,7 +35,7 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm }) => {
   }
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden h-min">
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
           <AvatarImage src={`/logos/${llm.from}.svg`} alt={llm.from} className="object-scale-down p-1" />

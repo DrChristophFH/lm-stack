@@ -4,7 +4,10 @@
   "release_date": "2024-04-22",
   "from": "apple",
   "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
-  "readme_link": "https://huggingface.co/apple/OpenELM-3B/raw/main/README.md",
+  "readme": {
+    "link": "https://huggingface.co/apple/OpenELM-3B/blob/main/README.md",
+    "raw": "https://huggingface.co/apple/OpenELM-3B/raw/main/README.md"
+  },
   "model": {
     "architecture": "Transformer",
     "subtype": "decoder-only",
@@ -20,7 +23,7 @@
     "positional_embedding": "RoPE",
     "attention_variant": "Grouped-Query-Attention",
     "activation": "SwiGLU"
-  }, 
+  },
   "training": {
     "tokens": "1.8T"
   },
