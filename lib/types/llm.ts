@@ -1,11 +1,7 @@
-export interface ModelInsights {
-  id: string;
-}
-
 export interface Model {
   architecture: string;
   subtype: string;
-  insights: ModelInsights[];
+  insights: string[];
   parameters: string;
   active_parameters: string;
   context_size: string;
@@ -21,6 +17,12 @@ export interface Training {
   tokens: string;
 }
 
+export interface Bonus {
+  type: string;
+  title: string;
+  url: string;
+}
+
 export interface LLM {
   id: string;
   name: string;
@@ -33,5 +35,6 @@ export interface LLM {
   license_url: string;
   download: string;
   paper: string;
+  bonus: Bonus[];
   updated: string;
 }

@@ -4,23 +4,22 @@
   "release_date": "2024-04-22",
   "from": "apple",
   "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
+  "readme_link": "https://huggingface.co/apple/OpenELM-3B/raw/main/README.md",
   "model": {
-    "architecture": "transformer",
+    "architecture": "Transformer",
     "subtype": "decoder-only",
     "insights": [
-      {
-        "id": "layer-wise-scaling"
-      }
+      "layer-wise-scaling"
     ],
     "parameters": "3B",
     "active_parameters": "3B",
     "context_size": "2048",
-    "tokenizer": "sentencepiece",
+    "tokenizer": "SentencePiece",
     "hidden_size": "3072",
     "vocab_size": "32000",
-    "positional_embedding": "rope",
-    "attention_variant": "grouped query attention",
-    "activation": "swiglu"
+    "positional_embedding": "RoPE",
+    "attention_variant": "Grouped-Query-Attention",
+    "activation": "SwiGLU"
   }, 
   "training": {
     "tokens": "1.8T"
@@ -29,5 +28,12 @@
   "license_url": "https://huggingface.co/apple/OpenELM-3B/blob/main/LICENSE",
   "download": "https://huggingface.co/apple/OpenELM-3B",
   "paper": "https://arxiv.org/pdf/2404.14619",
+  "bonus": [
+    {
+      "type": "repo",
+      "title": "CoreNet Repository",
+      "url": "https://github.com/apple/corenet"
+    }
+  ],
   "updated": "2024-05-22"
 }

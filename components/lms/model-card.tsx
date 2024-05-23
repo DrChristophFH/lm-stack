@@ -124,88 +124,149 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm }) => {
               </span>
             </li>
           </ul>
-          <div className="flex gap-3 items-center justify-evenly">
+          <div className="grid grid-cols-2 gap-4">
             <Button disabled={llm.download === ""} variant="outline" className="grow" onClick={() => window.open(llm.download)}>
-              Download 
+              Download
               <Download className="ml-2 h-4 w-4" />
             </Button>
             <Button disabled={llm.paper === ""} variant="outline" className="grow" onClick={() => window.open(llm.paper)}>
-              Paper 
+              Paper
               <GraduationCap className="ml-2 h-4 w-4" />
             </Button>
           </div>
-          <Separator className="my-2" />
-          <ul className="grid gap-3">
-            <li className="flex items-center justify-between">
-              <span className="text-muted-foreground">Subtotal</span>
-              <span>$299.00</span>
-            </li>
-            <li className="flex items-center justify-between">
-              <span className="text-muted-foreground">Shipping</span>
-              <span>$5.00</span>
-            </li>
-            <li className="flex items-center justify-between">
-              <span className="text-muted-foreground">Tax</span>
-              <span>$25.00</span>
-            </li>
-            <li className="flex items-center justify-between font-semibold">
-              <span className="text-muted-foreground">Total</span>
-              <span>$329.00</span>
-            </li>
-          </ul>
         </div>
         <Separator className="my-4" />
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid gap-3">
+          <div className="font-semibold">Architecture</div>
+          <div className="grid gird-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Base
+                </span>
+                <span>
+                  {llm.model.architecture}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Type
+                </span>
+                <span>
+                  {llm.model.subtype}
+                </span>
+              </div>
+            </div>
+            <div className="grid gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Parameters
+                </span>
+                <span>
+                  {llm.model.parameters}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Active Parameters
+                </span>
+                <span>
+                  {llm.model.active_parameters}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Separator className="my-4" />
+        <div className="grid gap-3">
+          <div className="font-semibold">Input</div>
+          <div className="grid gird-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Context Size
+                </span>
+                <span>
+                  {llm.model.context_size}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Embedding Size
+                </span>
+                <span>
+                  {llm.model.hidden_size}
+                </span>
+              </div>
+            </div>
+            <div className="grid gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Tokenizer
+                </span>
+                <span>
+                  {llm.model.tokenizer}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Vocabulary Size
+                </span>
+                <span>
+                  {llm.model.vocab_size}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Separator className="my-4" />
+        <div className="grid gap-3">
+          <div className="font-semibold">Internals</div>
           <div className="grid gap-3">
-            <div className="font-semibold">Shipping Information</div>
-            <address className="grid gap-0.5 not-italic text-muted-foreground">
-              <span>Liam Johnson</span>
-              <span>1234 Main St.</span>
-              <span>Anytown, CA 12345</span>
-            </address>
-          </div>
-          <div className="grid auto-rows-max gap-3">
-            <div className="font-semibold">Billing Information</div>
-            <div className="text-muted-foreground">
-              Same as shipping address
+            <div className="flex items-center justify-between">
+              <span className="text-muted-foreground">
+                Positional Embedding
+              </span>
+              <span>
+                {llm.model.positional_embedding}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-muted-foreground">
+                Attention Variant
+              </span>
+              <span>
+                {llm.model.attention_variant}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-muted-foreground">
+                Activation Function
+              </span>
+              <span>
+                {llm.model.activation}
+              </span>
             </div>
           </div>
         </div>
         <Separator className="my-4" />
         <div className="grid gap-3">
-          <div className="font-semibold">Customer Information</div>
-          <dl className="grid gap-3">
-            <div className="flex items-center justify-between">
-              <dt className="text-muted-foreground">Customer</dt>
-              <dd>Liam Johnson</dd>
+          <div className="font-semibold">Training</div>
+          <div className="grid gird-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid gap-3">
+              <div className="flex items-center justify-between">
+                <span className="text-muted-foreground">
+                  Tokens
+                </span>
+                <span>
+                  {llm.training.tokens}
+                </span>
+              </div>
             </div>
-            <div className="flex items-center justify-between">
-              <dt className="text-muted-foreground">Email</dt>
-              <dd>
-                <a href="mailto:">liam@acme.com</a>
-              </dd>
-            </div>
-            <div className="flex items-center justify-between">
-              <dt className="text-muted-foreground">Phone</dt>
-              <dd>
-                <a href="tel:">+1 234 567 890</a>
-              </dd>
-            </div>
-          </dl>
+          </div>
         </div>
         <Separator className="my-4" />
-        <div className="grid gap-3">
-          <div className="font-semibold">Payment Information</div>
-          <dl className="grid gap-3">
-            <div className="flex items-center justify-between">
-              <dt className="flex items-center gap-1 text-muted-foreground">
-                <CreditCard className="h-4 w-4" />
-                Visa
-              </dt>
-              <dd>**** **** **** 4532</dd>
-            </div>
-          </dl>
-        </div>
+        {/* TODO: Map bonus to link buttons with optional icons based on their type */}
       </CardContent>
       <CardFooter className="flex flex-row items-center border-t bg-muted/50 px-6 py-3">
         <div className="text-xs text-muted-foreground">
