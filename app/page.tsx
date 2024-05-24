@@ -53,7 +53,7 @@ export default function Dashboard() {
         </div>
         <div className="grid gap-4 grid-cols-1 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <ModelReadme readme={selectedLLM?.readme}></ModelReadme>
-          <ModelCard llm={selectedLLM} />
+          <ModelCard llm={selectedLLM} className="order-first lg:order-1"/>
         </div>
       </main>
     </div>

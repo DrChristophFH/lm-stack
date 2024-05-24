@@ -24,18 +24,20 @@ import {
 import { Separator } from "@/components/ui/separator"
 import { LLM } from "@/lib/types/llm"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { cn } from "@/lib/utils"
 
 interface ModelCardProps {
   llm: LLM | null;
+  className?: string;
 }
 
-const ModelCard: React.FC<ModelCardProps> = ({ llm }) => {
+const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
   if (!llm) {
     return null;
   }
 
   return (
-    <Card className="overflow-hidden h-min">
+    <Card className={cn("overflow-hidden h-min", className)}>
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
           <AvatarImage src={`logos/${llm.from}.svg`} alt={llm.from} className="object-scale-down p-1" />

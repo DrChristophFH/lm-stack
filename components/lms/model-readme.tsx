@@ -65,6 +65,13 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
                       {children}
                     </code>
                   )
+                },
+                table(props) {
+                  return (
+                    <div className="overflow-x-auto">
+                      <table {...props} />
+                    </div>
+                  )
                 }
               }}
             >
