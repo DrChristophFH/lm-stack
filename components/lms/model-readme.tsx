@@ -24,6 +24,8 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
           text = text.replace(/---[\s\S]*?---/, '')
           setMarkdown(text)
         });
+    } else {
+      setMarkdown(null);
     }
   }, [readme]);
 
@@ -39,7 +41,7 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
         </Button>}
       </CardHeader>
       <CardContent className={markdown ? 'prose max-w-none min-w-48' : ''}>
-        {!readme &&
+        {!readme || !markdown &&
           (
             <div className="flex justify-center content-center">
               <span className="text-muted-foreground">No readme available</span>

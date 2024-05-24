@@ -40,7 +40,7 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
     <Card className={cn("overflow-hidden h-min", className)}>
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
-          <AvatarImage src={llm.logo_file ? `logos/${llm.logo_file}` : `logos/${llm.from}.svg`} alt={llm.from.replace(" ", "_").toLowerCase()} className="object-scale-down p-1" />
+          <AvatarImage src={llm.logo_file ? `logos/${llm.logo_file}` : `logos/${llm.from.replace(" ", "_").toLowerCase()}.svg`} alt={llm.from.replace(" ", "_").toLowerCase()} className="object-scale-down p-1" />
           <AvatarFallback className="text-accent-background">
             {llm.from.charAt(0).toUpperCase() + llm.from.slice(1)}
           </AvatarFallback>
