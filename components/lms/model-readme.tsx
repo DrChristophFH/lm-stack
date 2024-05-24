@@ -58,10 +58,9 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
                     <SyntaxHighlighter
                       {...rest}
                       PreTag="div"
-                      children={String(children).replace(/\n$/, '')}
                       language={match[1]}
                       style={a11yDark}
-                    />
+                    >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
                   ) : (
                     <code {...rest} className={className}>
                       {children}
