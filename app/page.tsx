@@ -24,7 +24,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchLLMs = async () => {
-      const response = await fetch('lm-stack/generated/llms.json');
+      const response = await fetch('generated/llms.json');
       const data: LLM[] = await response.json();
       setLLMs(data);
     };

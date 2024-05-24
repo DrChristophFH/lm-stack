@@ -38,7 +38,7 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm }) => {
     <Card className="overflow-hidden h-min">
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
-          <AvatarImage src={`lm-stack/logos/${llm.from}.svg`} alt={llm.from} className="object-scale-down p-1" />
+          <AvatarImage src={`logos/${llm.from}.svg`} alt={llm.from} className="object-scale-down p-1" />
           <AvatarFallback className="text-accent-background">
             {llm.from.charAt(0).toUpperCase() + llm.from.slice(1)}
           </AvatarFallback>
