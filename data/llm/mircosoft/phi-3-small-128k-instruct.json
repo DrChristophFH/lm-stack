@@ -1,0 +1,44 @@
+{
+  "id": "mircosoft/phi-3-small-128k-instruct",
+  "name": "Phi-3-small-128k-instruct",
+  "release_date": "2024-05-21",
+  "from": "Mircosoft",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "grouped-query attention",
+      "blocksparse attention"
+    ],
+    "parameters": "7B",
+    "active_parameters": "7B",
+    "context_size": "128256",
+    "tokenizer": "tiktoken",
+    "hidden_size": "4096",
+    "vocab_size": "100352",
+    "positional_embedding": " LongRope ",
+    "attention_variant": "standard",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "4.8T"
+  },
+  "license": "TBA",
+  "license_url": "https://choosealicense.com/licenses/mit/",
+  "download": "nan",
+  "paper": "https://arxiv.org/abs/2404.14219",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

@@ -1,13 +1,13 @@
 {
-  "id": "apple/openelm-3b",
-  "name": "OpenELM-3B",
+  "id": "apple/openelm-1_1b-instruct",
+  "name": "OpenELM-1_1B-Instruct",
   "release_date": "2024-04-22",
   "from": "Apple",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
-    "link": "https://huggingface.co/apple/OpenELM-3B/blob/main/README.md",
-    "raw": "https://huggingface.co/apple/OpenELM-3B/raw/main/README.md"
+    "link": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/blob/main/README.md",
+    "raw": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/raw/main/README.md"
   },
   "model": {
     "architecture": "Transformer",
@@ -16,11 +16,11 @@
       "layer-wise scaling",
       "flash attention"
     ],
-    "parameters": "3B",
-    "active_parameters": "3B",
+    "parameters": "1.1B",
+    "active_parameters": "1.1B",
     "context_size": "2048",
     "tokenizer": "SentencePiece",
-    "hidden_size": "3072",
+    "hidden_size": "2048",
     "vocab_size": "32000",
     "positional_embedding": "RoPE",
     "attention_variant": "grouped-query attention",
@@ -30,8 +30,8 @@
     "tokens": "1.8T"
   },
   "license": "Apple-sample-code-license",
-  "license_url": "https://huggingface.co/apple/OpenELM-3B/blob/main/LICENSE",
-  "download": "https://huggingface.co/apple/OpenELM-3B",
+  "license_url": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/blob/main/LICENSE",
+  "download": "https://huggingface.co/apple/OpenELM-1_1B-Instruct",
   "paper": "https://arxiv.org/pdf/2404.14619",
   "bonus": [
     {

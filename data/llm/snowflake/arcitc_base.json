@@ -1,0 +1,43 @@
+{
+  "id": "snowflake/arcitc_base",
+  "name": "Arcitc base",
+  "release_date": "2024-04-24",
+  "from": "Snowflake",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "dense-MoE hybrid transformer",
+    "insights": [
+      "10B dense transformer + residual 128 x 3.66B MoE MLP"
+    ],
+    "parameters": "480B",
+    "active_parameters": "17B",
+    "context_size": "4096",
+    "tokenizer": "nan",
+    "hidden_size": "7168",
+    "vocab_size": "32000",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "3.5T"
+  },
+  "license": "Apache 2.0",
+  "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+  "download": "https://huggingface.co/Snowflake/snowflake-arctic-base",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

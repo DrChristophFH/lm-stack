@@ -1,0 +1,43 @@
+{
+  "id": "meta/llama-2_7b",
+  "name": "LLaMA-2 7B",
+  "release_date": "2023-07-19",
+  "from": "Meta",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "7B",
+    "active_parameters": "7B",
+    "context_size": "4096",
+    "tokenizer": "SentencePiece",
+    "hidden_size": "5120",
+    "vocab_size": "32000",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "2.0T"
+  },
+  "license": "LLAMA 2",
+  "license_url": "nan",
+  "download": "https://huggingface.co/meta-llama/Llama-2-7b",
+  "paper": "https://arxiv.org/abs/2307.09288",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

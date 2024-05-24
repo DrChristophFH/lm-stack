@@ -1,0 +1,43 @@
+{
+  "id": "microsoft/phi-2",
+  "name": "Phi-2",
+  "release_date": "2023-12-12",
+  "from": "Microsoft",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "2.78B",
+    "active_parameters": "2.78B",
+    "context_size": "2048",
+    "tokenizer": "nan",
+    "hidden_size": "2560",
+    "vocab_size": "51200",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "1.4T"
+  },
+  "license": "MIT",
+  "license_url": "https://choosealicense.com/licenses/mit/",
+  "download": "https://huggingface.co/microsoft/phi-2",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

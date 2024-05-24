@@ -1,9 +1,10 @@
 {
-  "id": "apple/OpenELM-270M",
+  "id": "apple/openelm-270m",
   "name": "OpenELM-270M",
   "release_date": "2024-04-22",
-  "from": "apple",
-  "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
+  "from": "Apple",
+  "usage_type": "GP-LLM",
+  "description": "",
   "readme": {
     "link": "https://huggingface.co/apple/OpenELM-270M/blob/main/README.md",
     "raw": "https://huggingface.co/apple/OpenELM-270M/raw/main/README.md"
@@ -12,7 +13,8 @@
     "architecture": "Transformer",
     "subtype": "decoder-only",
     "insights": [
-      "layer-wise-scaling"
+      "layer-wise scaling",
+      "flash attention"
     ],
     "parameters": "270M",
     "active_parameters": "270M",
@@ -21,9 +23,9 @@
     "hidden_size": "1280",
     "vocab_size": "32000",
     "positional_embedding": "RoPE",
-    "attention_variant": "Grouped-Query-Attention",
+    "attention_variant": "grouped-query attention",
     "activation": "SwiGLU"
-  }, 
+  },
   "training": {
     "tokens": "1.8T"
   },
@@ -38,5 +40,6 @@
       "url": "https://github.com/apple/corenet"
     }
   ],
-  "updated": "2024-05-22"
+  "updated": "2024-05-24",
+  "date": "2024-05-24"
 }

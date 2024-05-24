@@ -1,0 +1,43 @@
+{
+  "id": "01.ai/yi",
+  "name": "Yi",
+  "release_date": "nan",
+  "from": "01.ai",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "nan",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "nan",
+    "active_parameters": "nan",
+    "context_size": "nan",
+    "tokenizer": "nan",
+    "hidden_size": "nan",
+    "vocab_size": "nan",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "nan"
+  },
+  "license": "nan",
+  "license_url": "nan",
+  "download": "nan",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

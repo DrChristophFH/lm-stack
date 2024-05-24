@@ -1,0 +1,44 @@
+{
+  "id": "microsoft/phi-3-mini-128k-instruct",
+  "name": "Phi-3-mini-128k-instruct",
+  "release_date": "2024-03-23",
+  "from": "Microsoft",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "Llama-2 similar block structure",
+      "LongRope"
+    ],
+    "parameters": "3.82B",
+    "active_parameters": "3.82B",
+    "context_size": "128256",
+    "tokenizer": "LLaMA 1",
+    "hidden_size": "3072",
+    "vocab_size": "32064",
+    "positional_embedding": " LongRope ",
+    "attention_variant": "standard",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "3.3T"
+  },
+  "license": "MIT",
+  "license_url": "https://choosealicense.com/licenses/mit/",
+  "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+  "paper": "https://arxiv.org/abs/2404.14219",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

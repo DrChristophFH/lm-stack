@@ -1,0 +1,43 @@
+{
+  "id": "meta/llama-3_70b",
+  "name": "LLaMA-3 70B",
+  "release_date": "2024-04-18",
+  "from": "Meta",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "70B",
+    "active_parameters": "70B",
+    "context_size": "8192",
+    "tokenizer": "tiktoken",
+    "hidden_size": "4096",
+    "vocab_size": "128256",
+    "positional_embedding": "nan",
+    "attention_variant": "grouped-query attention",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "15T"
+  },
+  "license": "LLaMA 3",
+  "license_url": "nan",
+  "download": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

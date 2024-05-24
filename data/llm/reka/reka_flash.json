@@ -1,0 +1,44 @@
+{
+  "id": "reka/reka_flash",
+  "name": "Reka Flash",
+  "release_date": "2024-02-12",
+  "from": "Reka",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "encoder-decoder transformer",
+    "insights": [
+      "multimodal",
+      "Noam"
+    ],
+    "parameters": "21B",
+    "active_parameters": "21B",
+    "context_size": "128256",
+    "tokenizer": "tiktoken",
+    "hidden_size": "nan",
+    "vocab_size": "100000",
+    "positional_embedding": "nan",
+    "attention_variant": "grouped-query attention",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "5T"
+  },
+  "license": "nan",
+  "license_url": "nan",
+  "download": "nan",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

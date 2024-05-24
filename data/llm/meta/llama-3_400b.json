@@ -1,0 +1,43 @@
+{
+  "id": "meta/llama-3_400b",
+  "name": "LLaMA-3 400B",
+  "release_date": "TBA",
+  "from": "Meta",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "400B",
+    "active_parameters": "400B",
+    "context_size": "TBA",
+    "tokenizer": "TBA",
+    "hidden_size": "TBA",
+    "vocab_size": "TBA",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "TBA"
+  },
+  "license": "nan",
+  "license_url": "nan",
+  "download": "nan",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

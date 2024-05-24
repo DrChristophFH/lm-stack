@@ -1,0 +1,43 @@
+{
+  "id": "meta/llama_33b",
+  "name": "LLaMA 33B",
+  "release_date": "2023-02-27",
+  "from": "Meta",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "nan"
+    ],
+    "parameters": "33B",
+    "active_parameters": "33B",
+    "context_size": "2048",
+    "tokenizer": "SentencePiece",
+    "hidden_size": "6656",
+    "vocab_size": "32000",
+    "positional_embedding": "nan",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "1.4T"
+  },
+  "license": "nan",
+  "license_url": "nan",
+  "download": "nan",
+  "paper": "https://arxiv.org/abs/2302.13971",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}

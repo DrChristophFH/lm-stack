@@ -33,6 +33,7 @@ export interface LLM {
   name: string;
   release_date: string;
   from: string;
+  usage_type: string;
   description: string;
   readme?: Readme;
   model: Model;

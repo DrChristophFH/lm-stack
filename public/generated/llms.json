@@ -1,10 +1,2169 @@
 [
   {
-    "id": "apple/OpenELM-3B",
+    "id": "xai/grok-1",
+    "name": "Grok-1",
+    "release_date": "2024-03-17",
+    "from": "xAi",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "MoE",
+      "insights": [
+        "8 Experts"
+      ],
+      "parameters": "314B",
+      "active_parameters": "~ 78,5B",
+      "context_size": "8192",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "6144",
+      "vocab_size": "131072",
+      "positional_embedding": "RoPE",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "Apache 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/xai-org/grok-1",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "snowflake/arcitc_instruct",
+    "name": "Arcitc instruct",
+    "release_date": "2024-04-24",
+    "from": "Snowflake",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "dense-MoE hybrid transformer",
+      "insights": [
+        "10B dense transformer + residual 128 x 3.66B MoE MLP"
+      ],
+      "parameters": "480B",
+      "active_parameters": "17B",
+      "context_size": "4096",
+      "tokenizer": "nan",
+      "hidden_size": "7169",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "3.5T"
+    },
+    "license": "Apache 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/Snowflake/snowflake-arctic-instruct",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "snowflake/arcitc_base",
+    "name": "Arcitc base",
+    "release_date": "2024-04-24",
+    "from": "Snowflake",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "dense-MoE hybrid transformer",
+      "insights": [
+        "10B dense transformer + residual 128 x 3.66B MoE MLP"
+      ],
+      "parameters": "480B",
+      "active_parameters": "17B",
+      "context_size": "4096",
+      "tokenizer": "nan",
+      "hidden_size": "7168",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "3.5T"
+    },
+    "license": "Apache 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/Snowflake/snowflake-arctic-base",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "reka/reka_flash",
+    "name": "Reka Flash",
+    "release_date": "2024-02-12",
+    "from": "Reka",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "encoder-decoder transformer",
+      "insights": [
+        "multimodal",
+        "Noam"
+      ],
+      "parameters": "21B",
+      "active_parameters": "21B",
+      "context_size": "128256",
+      "tokenizer": "tiktoken",
+      "hidden_size": "nan",
+      "vocab_size": "100000",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "5T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "reka/reka_edge",
+    "name": "Reka Edge",
+    "release_date": "2024-02-12",
+    "from": "Reka",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "encoder-decoder transformer",
+      "insights": [
+        "multimodal",
+        "Noam"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "64128",
+      "tokenizer": "tiktoken",
+      "hidden_size": "nan",
+      "vocab_size": "100000",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.5T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "reka/reka_core",
+    "name": "Reka Core",
+    "release_date": "2024-04-15",
+    "from": "Reka",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "multimodal"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "openai/gpt-4",
+    "name": "GPT-4",
+    "release_date": "nan",
+    "from": "OpenAI",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "openai/gpt-3.5",
+    "name": "GPT-3.5",
+    "release_date": "nan",
+    "from": "OpenAI",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mistral/mixtral_8x7b",
+    "name": "Mixtral 8x7B",
+    "release_date": "nan",
+    "from": "Mistral",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mistral/mixtral_8x22b",
+    "name": "Mixtral 8x22B",
+    "release_date": "nan",
+    "from": "Mistral",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mistral/mistral_7b",
+    "name": "Mistral 7B",
+    "release_date": "nan",
+    "from": "Mistral",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-small",
+    "name": "phi-3-small",
+    "release_date": "TBA",
+    "from": "mircosoft",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "grouped-query attention",
+        "blocksparse attention"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "8192.0",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096.0",
+      "vocab_size": "100352.0",
+      "positional_embedding": "",
+      "attention_variant": "",
+      "activation": ""
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-small-4k-instruct",
+    "name": "Phi-3-small-4k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Mircosoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "grouped-query attention",
+        "blocksparse attention"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "4096",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "100352",
+      "positional_embedding": "nan",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-small-128k-instruct",
+    "name": "Phi-3-small-128k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Mircosoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "grouped-query attention",
+        "blocksparse attention"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "128256",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "100352",
+      "positional_embedding": " LongRope ",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-medium",
+    "name": "phi-3-medium",
+    "release_date": "TBA",
+    "from": "mircosoft",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "8192.0",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120.0",
+      "vocab_size": "100352.0",
+      "positional_embedding": "",
+      "attention_variant": "",
+      "activation": ""
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-medium-4k-instruct",
+    "name": "Phi-3-medium-4k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Mircosoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "4096",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120",
+      "vocab_size": "100352",
+      "positional_embedding": "nan",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "mircosoft/phi-3-medium-128k-instruct",
+    "name": "Phi-3-medium-128k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Mircosoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "128256",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120",
+      "vocab_size": "100352",
+      "positional_embedding": " LongRope ",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-3-mini-4k-instruct",
+    "name": "Phi-3-mini-4k-instruct",
+    "release_date": "2024-03-23",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "3.82B",
+      "active_parameters": "3.82B",
+      "context_size": "4096",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "3072",
+      "vocab_size": "32064",
+      "positional_embedding": "nan",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "3.3T"
+    },
+    "license": "MIT",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-3-mini-128k-instruct",
+    "name": "Phi-3-mini-128k-instruct",
+    "release_date": "2024-03-23",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure",
+        "LongRope"
+      ],
+      "parameters": "3.82B",
+      "active_parameters": "3.82B",
+      "context_size": "128256",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "3072",
+      "vocab_size": "32064",
+      "positional_embedding": " LongRope ",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "3.3T"
+    },
+    "license": "MIT",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-2",
+    "name": "Phi-2",
+    "release_date": "2023-12-12",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "2.78B",
+      "active_parameters": "2.78B",
+      "context_size": "2048",
+      "tokenizer": "nan",
+      "hidden_size": "2560",
+      "vocab_size": "51200",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "1.4T"
+    },
+    "license": "MIT",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "https://huggingface.co/microsoft/phi-2",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-1",
+    "name": "Phi-1",
+    "release_date": "2023-06-20",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "1.3B",
+      "active_parameters": "1.3B",
+      "context_size": "2048",
+      "tokenizer": "codegen-350M-mono",
+      "hidden_size": "2048",
+      "vocab_size": "51200",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "54B"
+    },
+    "license": "MIT",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "https://huggingface.co/microsoft/phi-1",
+    "paper": "https://arxiv.org/abs/2306.11644",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-1.5",
+    "name": "Phi-1.5",
+    "release_date": "2023-09-11",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "1.3B",
+      "active_parameters": "1.3B",
+      "context_size": "2048",
+      "tokenizer": "codegen-mono",
+      "hidden_size": "2048",
+      "vocab_size": "51200",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "150B"
+    },
+    "license": "MIT",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "https://huggingface.co/microsoft/phi-1_5",
+    "paper": "https://arxiv.org/abs/2309.05463",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama_7b",
+    "name": "LLaMA 7B",
+    "release_date": "2023-02-27",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "1.0T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2302.13971",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama_65b",
+    "name": "LLaMA 65B",
+    "release_date": "2023-02-27",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "65B",
+      "active_parameters": "65B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "8192",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "1.4T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2302.13971",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama_33b",
+    "name": "LLaMA 33B",
+    "release_date": "2023-02-27",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "33B",
+      "active_parameters": "33B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "6656",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "1.4T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2302.13971",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama_13b",
+    "name": "LLaMA 13B",
+    "release_date": "2023-02-27",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "13B",
+      "active_parameters": "13B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "1.0T"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2302.13971",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-3_8b_instruct",
+    "name": "LLaMA-3 8B instruct",
+    "release_date": "2024-04-18",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "8B",
+      "active_parameters": "8B",
+      "context_size": "8192",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "128256",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "15T"
+    },
+    "license": "LLaMA 3",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-3_8b",
+    "name": "LLaMA-3 8B",
+    "release_date": "2024-04-18",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "8B",
+      "active_parameters": "8B",
+      "context_size": "8192",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "128256",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "15T"
+    },
+    "license": "LLaMA 3",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Meta-Llama-3-8B",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-3_70b_instruct",
+    "name": "LLaMA-3 70B instruct",
+    "release_date": "2024-04-18",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "70B",
+      "active_parameters": "70B",
+      "context_size": "8192",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "128256",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "15T"
+    },
+    "license": "LLaMA 3",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-3_70b",
+    "name": "LLaMA-3 70B",
+    "release_date": "2024-04-18",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "70B",
+      "active_parameters": "70B",
+      "context_size": "8192",
+      "tokenizer": "tiktoken",
+      "hidden_size": "4096",
+      "vocab_size": "128256",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "15T"
+    },
+    "license": "LLaMA 3",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Meta-Llama-3-70B",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-3_400b",
+    "name": "LLaMA-3 400B",
+    "release_date": "TBA",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "400B",
+      "active_parameters": "400B",
+      "context_size": "TBA",
+      "tokenizer": "TBA",
+      "hidden_size": "TBA",
+      "vocab_size": "TBA",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "TBA"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_7b_chat",
+    "name": "LLaMA-2 7B chat",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-7b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_7b",
+    "name": "LLaMA-2 7B",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-7b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_70b_chat",
+    "name": "LLaMA-2 70B chat",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "70B",
+      "active_parameters": "70B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-70b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_70b",
+    "name": "LLaMA-2 70B",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "70B",
+      "active_parameters": "70B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "grouped-query attention",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-70b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_13b_chat",
+    "name": "LLaMA-2 13B chat",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "13B",
+      "active_parameters": "13B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-13b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "meta/llama-2_13b",
+    "name": "LLaMA-2 13B",
+    "release_date": "2023-07-19",
+    "from": "Meta",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "13B",
+      "active_parameters": "13B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "5120",
+      "vocab_size": "32000",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "2.0T"
+    },
+    "license": "LLAMA 2",
+    "license_url": "nan",
+    "download": "https://huggingface.co/meta-llama/Llama-2-13b",
+    "paper": "https://arxiv.org/abs/2307.09288",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "goolge/gemini_1.5_pro",
+    "name": "Gemini 1.5 pro",
+    "release_date": "nan",
+    "from": "Goolge",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "google/gemma",
+    "name": "Gemma",
+    "release_date": "nan",
+    "from": "Google",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "google/gemini_1.0_ultra",
+    "name": "Gemini 1.0 ultra",
+    "release_date": "nan",
+    "from": "Google",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "google/gemini_1.0_pro",
+    "name": "Gemini 1.0 pro",
+    "release_date": "nan",
+    "from": "Google",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "google/gemini_1.0_nano",
+    "name": "Gemini 1.0 nano",
+    "release_date": "nan",
+    "from": "Google",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "deepseek_ai/deepseek_coder",
+    "name": "DeepSeek Coder",
+    "release_date": "nan",
+    "from": "DeepSeek AI",
+    "usage_type": "Code LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "databricks/dbrx",
+    "name": "DBRX",
+    "release_date": "nan",
+    "from": "Databricks",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "cohere/command_r",
+    "name": "Command R",
+    "release_date": "nan",
+    "from": "Cohere",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "cohere/command_r+",
+    "name": "Command R+",
+    "release_date": "nan",
+    "from": "Cohere",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "bigcode_project/starcoder_2",
+    "name": "StarCoder 2",
+    "release_date": "nan",
+    "from": "BigCode Project",
+    "usage_type": "Code LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "bigcode_project/starcoder",
+    "name": "StarCoder",
+    "release_date": "nan",
+    "from": "BigCode Project",
+    "usage_type": "Code LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-450m",
+    "name": "OpenELM-450M",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-450M/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-450M/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "470M",
+      "active_parameters": "470M",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "1536",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-450M/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-450M",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-450m-instruct",
+    "name": "OpenELM-450M-Instruct",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-450M-Instruct/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-450M-Instruct/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "470M",
+      "active_parameters": "470M",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "1536",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-450M-Instruct/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-450M-Instruct",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-3b",
     "name": "OpenELM-3B",
     "release_date": "2024-04-22",
-    "from": "apple",
-    "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
     "readme": {
       "link": "https://huggingface.co/apple/OpenELM-3B/blob/main/README.md",
       "raw": "https://huggingface.co/apple/OpenELM-3B/raw/main/README.md"
@@ -13,7 +2172,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise-scaling"
+        "layer-wise scaling",
+        "flash attention"
       ],
       "parameters": "3B",
       "active_parameters": "3B",
@@ -22,7 +2182,7 @@
       "hidden_size": "3072",
       "vocab_size": "32000",
       "positional_embedding": "RoPE",
-      "attention_variant": "Grouped-Query-Attention",
+      "attention_variant": "grouped-query attention",
       "activation": "SwiGLU"
     },
     "training": {
@@ -39,14 +2199,61 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-22"
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
   },
   {
-    "id": "apple/OpenELM-270M",
+    "id": "apple/openelm-3b-instruct",
+    "name": "OpenELM-3B-Instruct",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-3B-Instruct/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "3B",
+      "active_parameters": "3B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "3072",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-3B-Instruct",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-270m",
     "name": "OpenELM-270M",
     "release_date": "2024-04-22",
-    "from": "apple",
-    "description": "OpenELM, a family of Open Efficient Language Models. OpenELM uses a layer-wise scaling strategy to efficiently allocate parameters within each layer of the transformer model, leading to enhanced accuracy.",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
     "readme": {
       "link": "https://huggingface.co/apple/OpenELM-270M/blob/main/README.md",
       "raw": "https://huggingface.co/apple/OpenELM-270M/raw/main/README.md"
@@ -55,7 +2262,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise-scaling"
+        "layer-wise scaling",
+        "flash attention"
       ],
       "parameters": "270M",
       "active_parameters": "270M",
@@ -64,7 +2272,7 @@
       "hidden_size": "1280",
       "vocab_size": "32000",
       "positional_embedding": "RoPE",
-      "attention_variant": "Grouped-Query-Attention",
+      "attention_variant": "grouped-query attention",
       "activation": "SwiGLU"
     },
     "training": {
@@ -81,6 +2289,615 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-22"
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-270m-instruct",
+    "name": "OpenELM-270M-Instruct",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-270M-Instruct/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-270M-Instruct/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "270M",
+      "active_parameters": "270M",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "1280",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-270M-Instruct/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-270M-Instruct",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-1_1b",
+    "name": "OpenELM-1_1B",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-1_1B/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-1_1B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "1.1B",
+      "active_parameters": "1.1B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "2048",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-1_1B/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-1_1B",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "apple/openelm-1_1b-instruct",
+    "name": "OpenELM-1_1B-Instruct",
+    "release_date": "2024-04-22",
+    "from": "Apple",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/blob/main/README.md",
+      "raw": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "layer-wise scaling",
+        "flash attention"
+      ],
+      "parameters": "1.1B",
+      "active_parameters": "1.1B",
+      "context_size": "2048",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "2048",
+      "vocab_size": "32000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "1.8T"
+    },
+    "license": "Apple-sample-code-license",
+    "license_url": "https://huggingface.co/apple/OpenELM-1_1B-Instruct/blob/main/LICENSE",
+    "download": "https://huggingface.co/apple/OpenELM-1_1B-Instruct",
+    "paper": "https://arxiv.org/pdf/2404.14619",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "CoreNet Repository",
+        "url": "https://github.com/apple/corenet"
+      }
+    ],
+    "updated": "2024-05-24",
+    "date": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_3_sonnet",
+    "name": "Claude 3 Sonnet",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_3_opus",
+    "name": "Claude 3 Opus",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_3_haiku",
+    "name": "Claude 3 Haiku",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_2",
+    "name": "Claude 2",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_2.1",
+    "name": "Claude 2.1",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "anthropic/claude_1",
+    "name": "Claude 1",
+    "release_date": "nan",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "alibaba_cloud/qwen_1.5",
+    "name": "Qwen 1.5",
+    "release_date": "nan",
+    "from": "Alibaba Cloud",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "alibaba_cloud/qwen",
+    "name": "Qwen",
+    "release_date": "nan",
+    "from": "Alibaba Cloud",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "ai21/jurassic-2",
+    "name": "Jurassic-2",
+    "release_date": "nan",
+    "from": "ai21",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "ai21/jamba",
+    "name": "Jamba",
+    "release_date": "nan",
+    "from": "ai21",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "SMM-Transformer Hybrid",
+      "subtype": "SSM-Transformer",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "01.ai/yi",
+    "name": "Yi",
+    "release_date": "nan",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "nan",
+      "insights": [
+        "nan"
+      ],
+      "parameters": "nan",
+      "active_parameters": "nan",
+      "context_size": "nan",
+      "tokenizer": "nan",
+      "hidden_size": "nan",
+      "vocab_size": "nan",
+      "positional_embedding": "nan",
+      "attention_variant": "nan",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "nan"
+    },
+    "license": "nan",
+    "license_url": "nan",
+    "download": "nan",
+    "paper": "nan",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
   }
 ]

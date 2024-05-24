@@ -1,0 +1,43 @@
+{
+  "id": "xai/grok-1",
+  "name": "Grok-1",
+  "release_date": "2024-03-17",
+  "from": "xAi",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "MoE",
+    "insights": [
+      "8 Experts"
+    ],
+    "parameters": "314B",
+    "active_parameters": "~ 78,5B",
+    "context_size": "8192",
+    "tokenizer": "SentencePiece",
+    "hidden_size": "6144",
+    "vocab_size": "131072",
+    "positional_embedding": "RoPE",
+    "attention_variant": "nan",
+    "activation": "nan"
+  },
+  "training": {
+    "tokens": "nan"
+  },
+  "license": "Apache 2.0",
+  "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+  "download": "https://huggingface.co/xai-org/grok-1",
+  "paper": "nan",
+  "bonus": [
+    {
+      "type": "",
+      "title": "",
+      "url": ""
+    }
+  ],
+  "updated": "2024-05-24"
+}
