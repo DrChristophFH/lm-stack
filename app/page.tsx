@@ -44,7 +44,10 @@ export default function Dashboard() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle>LLM Timeline</CardTitle>
-              <BotMessageSquare />
+              <div className="flex flex-row items-center space-x-2">
+                <span className="text-sm text-gray-500">ℹ️ Click on a model to view more details</span>
+                <BotMessageSquare />
+              </div>
             </CardHeader>
             <CardContent>
               <LlmTimeline llms={llms} selectCallback={selectCallback} />
