@@ -52,17 +52,16 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
               remarkPlugins={[remarkGfm]}
               components={{
                 code(props) {
-                  const { children, className, node, ...rest } = props
+                  const { children, className, node } = props
                   const match = /language-(\w+)/.exec(className || '')
                   return match ? (
                     <SyntaxHighlighter
-                      {...rest}
                       PreTag="div"
                       language={match[1]}
                       style={a11yDark}
                     >{String(children).replace(/\n$/, '')}</SyntaxHighlighter>
                   ) : (
-                    <code {...rest} className={className}>
+                    <code className={className}>
                       {children}
                     </code>
                   )
