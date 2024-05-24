@@ -1,8 +1,8 @@
 {
-  "id": "goolge/gemini_1.5_pro",
+  "id": "google/gemini_1.5_pro",
   "name": "Gemini 1.5 pro",
   "release_date": "nan",
-  "from": "Goolge",
+  "from": "Google",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {

@@ -1,8 +1,8 @@
 {
-  "id": "mircosoft/phi-3-medium-4k-instruct",
-  "name": "Phi-3-medium-4k-instruct",
+  "id": "microsoft/phi-3-medium-128k-instruct",
+  "name": "Phi-3-medium-128k-instruct",
   "release_date": "2024-05-21",
-  "from": "Mircosoft",
+  "from": "Microsoft",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
@@ -17,11 +17,11 @@
     ],
     "parameters": "14B",
     "active_parameters": "14B",
-    "context_size": "4096",
+    "context_size": "128256",
     "tokenizer": "LLaMA 1",
     "hidden_size": "5120",
     "vocab_size": "100352",
-    "positional_embedding": "nan",
+    "positional_embedding": " LongRope ",
     "attention_variant": "standard",
     "activation": "nan"
   },

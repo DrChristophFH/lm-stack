@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   enable-background="new 0 0 2499.6 2500"
+   viewBox="0 0 2499.6 2499.9999"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="microsoft.svg"
+   width="2499.6001"
+   height="2500"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.3317745"
+     inkscape:cx="742.97452"
+     inkscape:cy="1493.4843"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M 1187.9,1187.9 H 0 V 0 h 1187.9 z"
+     fill="#f1511b"
+     id="path1" />
+  <path
+     d="m 2499.6,1187.9 h -1188 V 0 h 1187.9 v 1187.9 z"
+     fill="#80cc28"
+     id="path2" />
+  <path
+     d="M 1187.9,2500 H 0 V 1312.1 h 1187.9 z"
+     fill="#00adef"
+     id="path3" />
+  <path
+     d="m 2499.6,2500 h -1188 V 1312.1 H 2499.5 V 2500 Z"
+     fill="#fbbc09"
+     id="path4" />
+</svg>

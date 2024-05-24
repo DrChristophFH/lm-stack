@@ -25,7 +25,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
     let html = document.createElement("div");
     html.appendChild(document.createTextNode(llm.name));
     let image = document.createElement("img");
-    image.src = "logos/" + llm.from + ".svg";
+    image.src = "logos/" + (llm.logo_file ? llm.logo_file : (llm.from + ".svg"));
     image.style.maxHeight = "1em";
     image.style.marginLeft = "0.5em";
     image.alt = "";

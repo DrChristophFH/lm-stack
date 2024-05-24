@@ -1,8 +1,8 @@
 {
-    "id": "mircosoft/phi-3-medium",
+    "id": "microsoft/phi-3-medium",
     "name": "phi-3-medium",
     "release_date": "TBA",
-    "from": "mircosoft",
+    "from": "microsoft",
     "description": "",
     "readme": {
         "link": "",

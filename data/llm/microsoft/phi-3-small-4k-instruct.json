@@ -1,8 +1,8 @@
 {
-  "id": "mircosoft/phi-3-medium-128k-instruct",
-  "name": "Phi-3-medium-128k-instruct",
+  "id": "microsoft/phi-3-small-4k-instruct",
+  "name": "Phi-3-small-4k-instruct",
   "release_date": "2024-05-21",
-  "from": "Mircosoft",
+  "from": "Microsoft",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
@@ -13,15 +13,16 @@
     "architecture": "Transformer",
     "subtype": "decoder-only",
     "insights": [
-      "Llama-2 similar block structure"
+      "grouped-query attention",
+      "blocksparse attention"
     ],
-    "parameters": "14B",
-    "active_parameters": "14B",
-    "context_size": "128256",
-    "tokenizer": "LLaMA 1",
-    "hidden_size": "5120",
+    "parameters": "7B",
+    "active_parameters": "7B",
+    "context_size": "4096",
+    "tokenizer": "tiktoken",
+    "hidden_size": "4096",
     "vocab_size": "100352",
-    "positional_embedding": " LongRope ",
+    "positional_embedding": "nan",
     "attention_variant": "standard",
     "activation": "nan"
   },

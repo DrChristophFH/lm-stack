@@ -133,6 +133,7 @@
     "name": "Reka Flash",
     "release_date": "2024-02-12",
     "from": "Reka",
+    "logo_file": "reka.jpg",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -177,6 +178,7 @@
     "name": "Reka Edge",
     "release_date": "2024-02-12",
     "from": "Reka",
+    "logo_file": "reka.jpg",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -221,6 +223,7 @@
     "name": "Reka Core",
     "release_date": "2024-04-15",
     "from": "Reka",
+    "logo_file": "reka.jpg",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -475,10 +478,10 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "mircosoft/phi-3-small",
+    "id": "microsoft/phi-3-small",
     "name": "phi-3-small",
     "release_date": "TBA",
-    "from": "mircosoft",
+    "from": "microsoft",
     "description": "",
     "readme": {
       "link": "",
@@ -518,10 +521,10 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "mircosoft/phi-3-small-4k-instruct",
+    "id": "microsoft/phi-3-small-4k-instruct",
     "name": "Phi-3-small-4k-instruct",
     "release_date": "2024-05-21",
-    "from": "Mircosoft",
+    "from": "Microsoft",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -562,10 +565,10 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "mircosoft/phi-3-small-128k-instruct",
+    "id": "microsoft/phi-3-small-128k-instruct",
     "name": "Phi-3-small-128k-instruct",
     "release_date": "2024-05-21",
-    "from": "Mircosoft",
+    "from": "Microsoft",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -584,134 +587,6 @@
       "context_size": "128256",
       "tokenizer": "tiktoken",
       "hidden_size": "4096",
-      "vocab_size": "100352",
-      "positional_embedding": " LongRope ",
-      "attention_variant": "standard",
-      "activation": "nan"
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "https://choosealicense.com/licenses/mit/",
-    "download": "nan",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
-    "id": "mircosoft/phi-3-medium",
-    "name": "phi-3-medium",
-    "release_date": "TBA",
-    "from": "mircosoft",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "Llama-2 similar block structure"
-      ],
-      "parameters": "14B",
-      "active_parameters": "14B",
-      "context_size": "8192.0",
-      "tokenizer": "LLaMA 1",
-      "hidden_size": "5120.0",
-      "vocab_size": "100352.0",
-      "positional_embedding": "",
-      "attention_variant": "",
-      "activation": ""
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "",
-    "download": "nan",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
-    "id": "mircosoft/phi-3-medium-4k-instruct",
-    "name": "Phi-3-medium-4k-instruct",
-    "release_date": "2024-05-21",
-    "from": "Mircosoft",
-    "usage_type": "GP-LLM",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "Llama-2 similar block structure"
-      ],
-      "parameters": "14B",
-      "active_parameters": "14B",
-      "context_size": "4096",
-      "tokenizer": "LLaMA 1",
-      "hidden_size": "5120",
-      "vocab_size": "100352",
-      "positional_embedding": "nan",
-      "attention_variant": "standard",
-      "activation": "nan"
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "https://choosealicense.com/licenses/mit/",
-    "download": "nan",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
-    "id": "mircosoft/phi-3-medium-128k-instruct",
-    "name": "Phi-3-medium-128k-instruct",
-    "release_date": "2024-05-21",
-    "from": "Mircosoft",
-    "usage_type": "GP-LLM",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "Llama-2 similar block structure"
-      ],
-      "parameters": "14B",
-      "active_parameters": "14B",
-      "context_size": "128256",
-      "tokenizer": "LLaMA 1",
-      "hidden_size": "5120",
       "vocab_size": "100352",
       "positional_embedding": " LongRope ",
       "attention_variant": "standard",
@@ -810,6 +685,134 @@
     "license": "MIT",
     "license_url": "https://choosealicense.com/licenses/mit/",
     "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-3-medium",
+    "name": "phi-3-medium",
+    "release_date": "TBA",
+    "from": "microsoft",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "8192.0",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120.0",
+      "vocab_size": "100352.0",
+      "positional_embedding": "",
+      "attention_variant": "",
+      "activation": ""
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-3-medium-4k-instruct",
+    "name": "Phi-3-medium-4k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "4096",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120",
+      "vocab_size": "100352",
+      "positional_embedding": "nan",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
+    "paper": "https://arxiv.org/abs/2404.14219",
+    "bonus": [
+      {
+        "type": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "updated": "2024-05-24"
+  },
+  {
+    "id": "microsoft/phi-3-medium-128k-instruct",
+    "name": "Phi-3-medium-128k-instruct",
+    "release_date": "2024-05-21",
+    "from": "Microsoft",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [
+        "Llama-2 similar block structure"
+      ],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "128256",
+      "tokenizer": "LLaMA 1",
+      "hidden_size": "5120",
+      "vocab_size": "100352",
+      "positional_embedding": " LongRope ",
+      "attention_variant": "standard",
+      "activation": "nan"
+    },
+    "training": {
+      "tokens": "4.8T"
+    },
+    "license": "TBA",
+    "license_url": "https://choosealicense.com/licenses/mit/",
+    "download": "nan",
     "paper": "https://arxiv.org/abs/2404.14219",
     "bonus": [
       {
@@ -1595,10 +1598,10 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "goolge/gemini_1.5_pro",
-    "name": "Gemini 1.5 pro",
+    "id": "google/gemma",
+    "name": "Gemma",
     "release_date": "nan",
-    "from": "Goolge",
+    "from": "Google",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -1638,8 +1641,8 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "google/gemma",
-    "name": "Gemma",
+    "id": "google/gemini_1.5_pro",
+    "name": "Gemini 1.5 pro",
     "release_date": "nan",
     "from": "Google",
     "usage_type": "GP-LLM",

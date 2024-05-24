@@ -3,6 +3,7 @@
   "name": "Reka Edge",
   "release_date": "2024-02-12",
   "from": "Reka",
+  "logo_file": "reka.jpg",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
