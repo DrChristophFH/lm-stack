@@ -1,0 +1,41 @@
+{
+  "id": "01-ai/Yi-6B",
+  "name": "Yi-34B-200K",
+  "release_date": "2023-11-06",
+  "from": "01.ai",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "https://huggingface.co/apple/Yi-34B-200K/blob/main/README.md",
+    "raw": "https://huggingface.co/apple/Yi-34B-200K/raw/main/README.md"
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [],
+    "parameters": "34B",
+    "active_parameters": "6B",
+    "context_size": "200K",
+    "tokenizer": "SentencePiece",
+    "hidden_size": "7168",
+    "vocab_size": " 64000",
+    "positional_embedding": "RoPE",
+    "attention_variant": "grouped-query-attention",
+    "activation": "SwiGLU"
+  },
+  "training": {
+    "tokens": "3T"
+  },
+  "license": "yi-license",
+  "license_url": "https://huggingface.co/01-ai/Yi-34B-200K/blob/main/LICENSE",
+  "download": "https://huggingface.co/01-ai/Yi-34B-200K",
+  "paper": "https://arxiv.org/abs/2403.04652",
+  "bonus": [
+    {
+      "type": "repo",
+      "title": "Yi GitHub Repository",
+      "url": "https://github.com/01-ai/Yi"
+    }
+  ],
+  "updated": "2024-05-25"
+}
