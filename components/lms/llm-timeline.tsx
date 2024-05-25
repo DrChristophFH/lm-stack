@@ -53,7 +53,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
     maxMinorChars: 4,
     minHeight: "400px",
     maxHeight: "400px",
-    start: new Date("2022-01-01"),
+    start: new Date("2023-01-01"),
     end: future, // today + 30 days
   };
   
