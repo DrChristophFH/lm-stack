@@ -1,0 +1,41 @@
+{
+  "id": "anthropic/claude_instant_1.2",
+  "name": "Claude Instant 1.2",
+  "release_date": "2023-08-09",
+  "from": "Anthropic",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "",
+    "raw": ""
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [],
+    "parameters": "-",
+    "active_parameters": "-",
+    "context_size": "100K",
+    "tokenizer": "-",
+    "hidden_size": "-",
+    "vocab_size": "-",
+    "positional_embedding": "-",
+    "attention_variant": "-",
+    "activation": "-"
+  },
+  "training": {
+    "tokens": "-"
+  },
+  "license": "",
+  "license_url": "",
+  "download": "",
+  "paper": "",
+  "bonus": [
+    {
+      "type": "blog",
+      "title": "Releasing Claude Instant 1.2",
+      "url": "https://www.anthropic.com/news/releasing-claude-instant-1-2"
+    }
+  ],
+  "updated": "2024-05-25"
+}

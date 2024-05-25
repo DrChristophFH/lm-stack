@@ -7,26 +7,39 @@ import React from "react";
 import { Expand, Minimize2, RotateCcw } from "lucide-react";
 import { Button } from "../ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
+import { Insights } from "@/lib/types/insights";
 
 interface Props {
   llms: LLM[];
+  insights: Insights | null;
   selectCallback: (llm: LLM) => void;
 }
 
-const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
+const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   const container = useRef(null);
   const [timeline, setTimeline] = useState<Timeline | null>(null);
   const [expanded, setExpanded] = useState(false);
 
-  let now = new Date(); // today
-  let future = new Date().setDate(now.getDate() + 30); // today + 30 days
+  const now = new Date(); // today
+  const future = new Date().setDate(now.getDate() + 30); // today + 30 days
 
   const items: any = llms.filter((llm) => !(llm.release_date === "nan")).map((llm) => {
-    let html = document.createElement("div");
+    const html = document.createElement("div");
     html.appendChild(document.createTextNode(llm.name));
-    let image = document.createElement("img");
-    image.src = "logos/" + (llm.logo_file ? llm.logo_file : (llm.from.replace(" ", "_").toLowerCase() + ".svg"));
+    const image = document.createElement("img");
+
+    const company = insights?.companies[llm.from];
+    const fall_back_file = llm.from.replace(" ", "_").toLowerCase() + `.svg`
+
+    const logo_path = `logos/` + (
+      company ? company.logo :
+        llm.logo_file ? llm.logo_file :
+          fall_back_file
+    )
+
+    image.src = logo_path;
     image.style.maxHeight = "1em";
+    image.style.maxWidth = "2em";
     image.style.marginLeft = "0.5em";
     image.alt = "";
     html.appendChild(image);
@@ -35,11 +48,14 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
 
     let release_date = Date.parse(llm.release_date) ? new Date(llm.release_date) : future;
 
+    const className = llm.download === '' ? 'closed-source' : ''
+
     return ({
       id: llm.id,
       content: html,
       start: release_date,
       data: llm,
+      className: className,
     });
   });
 
@@ -53,13 +69,13 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
     maxMinorChars: 4,
     minHeight: "400px",
     maxHeight: "400px",
-    start: new Date("2022-01-01"),
+    start: new Date("2023-01-01"),
     end: future, // today + 30 days
   };
-  
+
   useEffect(() => {
     if (!container.current) return;
-    
+
     let newTimeline = new Timeline(container.current, items, options);
 
     setTimeline(newTimeline);
@@ -77,6 +93,10 @@ const LlmTimeline: React.FC<Props> = ({ llms, selectCallback }) => {
       newTimeline.destroy();
     };
   }, [container, llms]);
+
+  if (!insights) {
+    return null;
+  }
 
   const handleReset = () => {
     timeline?.setWindow(options.start, options.end);

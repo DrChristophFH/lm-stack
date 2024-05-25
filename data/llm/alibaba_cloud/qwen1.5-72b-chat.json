@@ -1,0 +1,46 @@
+{
+  "id": "Qwen/Qwen1.5-72B-Chat",
+  "name": "Qwen1.5-72B-Chat",
+  "release_date": "2024-02-04",
+  "from": "qwenlm",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/blob/main/README.md",
+    "raw": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/raw/main/README.md"
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [],
+    "parameters": "72B",
+    "active_parameters": "72B",
+    "context_size": "32768",
+    "tokenizer": "Qwen2Tokenizer",
+    "hidden_size": "8192",
+    "vocab_size": "152064",
+    "positional_embedding": "RoPE",
+    "attention_variant": "Multi-head Attention",
+    "activation": "SwiGLU"
+  },
+  "training": {
+    "tokens": "-"
+  },
+  "license": "tongyi-qianwen-research",
+  "license_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/blob/main/LICENSE",
+  "download": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
+  "paper": "-",
+  "bonus": [
+    {
+      "type": "repo",
+      "title": "Qwen 1.5 GitHub Repository",
+      "url": "https://github.com/QwenLM/Qwen1.5"
+    },
+    {
+      "type": "blog",
+      "title": "Qwen 1.5 Blog Post",
+      "url": "https://qwenlm.github.io/blog/qwen1.5/"
+    }
+  ],
+  "updated": "2024-05-25"
+}

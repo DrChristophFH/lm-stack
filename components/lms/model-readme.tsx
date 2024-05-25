@@ -1,5 +1,5 @@
 import { Readme } from "@/lib/types/llm";
-import { Link, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "../ui/card";
 import Markdown from 'react-markdown'
@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import remarkGfm from 'remark-gfm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import Link from "next/link";
 
 interface ModelReadmeProps {
   readme?: Readme;
@@ -29,16 +30,22 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
     }
   }, [readme]);
 
+  if (!readme) {
+    return null;
+  }
+
   return (
     <Card className="xl:col-span-2">
       <CardHeader className="flex flex-row items-center">
         <CardTitle>Readme</CardTitle>
-        {readme && readme.url && <Button asChild size="sm" className="ml-auto gap-1">
-          <Link href={readme.url}>
-            View
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
-        </Button>}
+        {readme.link && (
+          <Button asChild size="sm" className="ml-auto gap-1">
+            <Link href={readme.link}>
+              View
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </Button>)
+        }
       </CardHeader>
       <CardContent className={markdown ? 'prose max-w-none min-w-48' : ''}>
         {!readme || !markdown &&

@@ -478,49 +478,6 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "microsoft/phi-3-small",
-    "name": "phi-3-small",
-    "release_date": "TBA",
-    "from": "microsoft",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "grouped-query attention",
-        "blocksparse attention"
-      ],
-      "parameters": "7B",
-      "active_parameters": "7B",
-      "context_size": "8192.0",
-      "tokenizer": "tiktoken",
-      "hidden_size": "4096.0",
-      "vocab_size": "100352.0",
-      "positional_embedding": "",
-      "attention_variant": "",
-      "activation": ""
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "",
-    "download": "nan",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
     "id": "microsoft/phi-3-small-4k-instruct",
     "name": "Phi-3-small-4k-instruct",
     "release_date": "2024-05-21",
@@ -685,48 +642,6 @@
     "license": "MIT",
     "license_url": "https://choosealicense.com/licenses/mit/",
     "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
-    "id": "microsoft/phi-3-medium",
-    "name": "phi-3-medium",
-    "release_date": "TBA",
-    "from": "microsoft",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "Llama-2 similar block structure"
-      ],
-      "parameters": "14B",
-      "active_parameters": "14B",
-      "context_size": "8192.0",
-      "tokenizer": "LLaMA 1",
-      "hidden_size": "5120.0",
-      "vocab_size": "100352.0",
-      "positional_embedding": "",
-      "attention_variant": "",
-      "activation": ""
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "",
-    "download": "nan",
     "paper": "https://arxiv.org/abs/2404.14219",
     "bonus": [
       {
@@ -2074,7 +1989,7 @@
     "id": "apple/openelm-450m",
     "name": "OpenELM-450M",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2085,8 +2000,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "470M",
       "active_parameters": "470M",
@@ -2112,14 +2027,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-450m-instruct",
     "name": "OpenELM-450M-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2130,8 +2044,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "470M",
       "active_parameters": "470M",
@@ -2157,14 +2071,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-3b",
     "name": "OpenELM-3B",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2175,8 +2088,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "3B",
       "active_parameters": "3B",
@@ -2202,14 +2115,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-3b-instruct",
     "name": "OpenELM-3B-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2220,8 +2132,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "3B",
       "active_parameters": "3B",
@@ -2247,14 +2159,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-270m",
     "name": "OpenELM-270M",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2265,8 +2176,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "270M",
       "active_parameters": "270M",
@@ -2284,7 +2195,7 @@
     "license": "Apple-sample-code-license",
     "license_url": "https://huggingface.co/apple/OpenELM-270M/blob/main/LICENSE",
     "download": "https://huggingface.co/apple/OpenELM-270M",
-    "paper": "https://arxiv.org/pdf/2404.14619",
+    "paper": "https://arxiv.org/abs/2404.14619",
     "bonus": [
       {
         "type": "repo",
@@ -2292,14 +2203,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-270m-instruct",
     "name": "OpenELM-270M-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2310,8 +2220,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "270M",
       "active_parameters": "270M",
@@ -2337,14 +2247,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-1_1b",
     "name": "OpenELM-1_1B",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2355,8 +2264,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "1.1B",
       "active_parameters": "1.1B",
@@ -2382,14 +2291,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-1_1b-instruct",
     "name": "OpenELM-1_1B-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2400,8 +2308,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "1.1B",
       "active_parameters": "1.1B",
@@ -2427,13 +2335,12 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
-    "id": "anthropic/claude_3_sonnet",
-    "name": "Claude 3 Sonnet",
-    "release_date": "nan",
+    "id": "anthropic/claude_instant_1.2",
+    "name": "Claude Instant 1.2",
+    "release_date": "2023-08-09",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2443,32 +2350,73 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "100K",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Releasing Claude Instant 1.2",
+        "url": "https://www.anthropic.com/news/releasing-claude-instant-1-2"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "anthropic/claude_3_sonnet",
+    "name": "Claude 3 Sonnet",
+    "release_date": "2024-03-04",
+    "from": "Anthropic",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "",
+      "raw": ""
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "-",
+      "insights": [
+        "-"
+      ],
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "200K",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
+    "bonus": [
+      {
+        "type": "blog",
+        "title": "Introducing the next generation of Claude",
+        "url": "https://www.anthropic.com/news/claude-3-family"
       }
     ],
     "updated": "2024-05-24"
@@ -2476,7 +2424,7 @@
   {
     "id": "anthropic/claude_3_opus",
     "name": "Claude 3 Opus",
-    "release_date": "nan",
+    "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2486,32 +2434,32 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
+      "subtype": "-",
       "insights": [
-        "nan"
+        "-"
       ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "-",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Introducing the next generation of Claude",
+        "url": "https://www.anthropic.com/news/claude-3-family"
       }
     ],
     "updated": "2024-05-24"
@@ -2519,7 +2467,7 @@
   {
     "id": "anthropic/claude_3_haiku",
     "name": "Claude 3 Haiku",
-    "release_date": "nan",
+    "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2529,32 +2477,32 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
+      "subtype": "-",
       "insights": [
-        "nan"
+        "-"
       ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "-",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Introducing the next generation of Claude",
+        "url": "https://www.anthropic.com/news/claude-3-family"
       }
     ],
     "updated": "2024-05-24"
@@ -2562,7 +2510,7 @@
   {
     "id": "anthropic/claude_2",
     "name": "Claude 2",
-    "release_date": "nan",
+    "release_date": "2023-07-11",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2572,40 +2520,38 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "100K",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Claude 2",
+        "url": "https://www.anthropic.com/news/claude-2"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "anthropic/claude_2.1",
     "name": "Claude 2.1",
-    "release_date": "nan",
+    "release_date": "2023-11-21",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2615,40 +2561,38 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "200K",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Introducing Claude 2.1",
+        "url": "https://www.anthropic.com/news/claude-2-1"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "anthropic/claude_1",
     "name": "Claude 1",
-    "release_date": "nan",
+    "release_date": "2023-03-14",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
     "description": "",
@@ -2658,84 +2602,775 @@
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "-",
+      "active_parameters": "-",
+      "context_size": "-",
+      "tokenizer": "-",
+      "hidden_size": "-",
+      "vocab_size": "-",
+      "positional_embedding": "-",
+      "attention_variant": "-",
+      "activation": "-"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "",
+    "license_url": "",
+    "download": "",
+    "paper": "",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog",
+        "title": "Introducing Claude",
+        "url": "https://www.anthropic.com/news/introducing-claude"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
-    "id": "alibaba_cloud/qwen_1.5",
-    "name": "Qwen 1.5",
-    "release_date": "nan",
-    "from": "Alibaba Cloud",
+    "id": "Qwen/Qwen1.5-7B",
+    "name": "Qwen1.5-7B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
-      "link": "",
-      "raw": ""
+      "link": "https://huggingface.co/Qwen/Qwen1.5-7B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-7B/raw/main/README.md"
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "4096",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-7B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-7B",
+    "paper": "-",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
-    "id": "alibaba_cloud/qwen",
+    "id": "Qwen/Qwen1.5-7B-Chat",
+    "name": "Qwen1.5-7B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-7B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-7B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "7B",
+      "active_parameters": "7B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "4096",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-7B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-7B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-72B",
+    "name": "Qwen1.5-72B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-72B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-72B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "72B",
+      "active_parameters": "72B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "8192",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-72B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-72B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-72B-Chat",
+    "name": "Qwen1.5-72B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "72B",
+      "active_parameters": "72B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "8192",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-72B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-4B",
+    "name": "Qwen1.5-4B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-4B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-4B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "4B",
+      "active_parameters": "4B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "2560",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-4B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-4B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-4B-Chat",
+    "name": "Qwen1.5-4B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "4B",
+      "active_parameters": "4B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "2560",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-32B",
+    "name": "Qwen1.5-32B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-32B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-32B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "32B",
+      "active_parameters": "32B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "5120",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-32B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-32B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-32B-Chat",
+    "name": "Qwen1.5-32B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "32B",
+      "active_parameters": "32B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "5120",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-32B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-14B",
+    "name": "Qwen1.5-14B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-14B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-14B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "5120",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-14B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-14B-Chat",
+    "name": "Qwen1.5-14B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "14B",
+      "active_parameters": "14B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "5120",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-14B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-110B",
+    "name": "Qwen1.5-110B",
+    "release_date": "2024-04-25",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-110B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-110B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "110B",
+      "active_parameters": "110B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "8192",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-110B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-110B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-110B-Chat",
+    "name": "Qwen1.5-110B-Chat",
+    "release_date": "2024-04-25",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "110B",
+      "active_parameters": "110B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "8192",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-110B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-1.8B",
+    "name": "Qwen1.5-1.8B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-1.8B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-1.8B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "1.8B",
+      "active_parameters": "1.8B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "2048",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-1.8B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-1.8B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-1.8B-Chat",
+    "name": "Qwen1.5-1.8B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-1.8B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-1.8B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "1.8B",
+      "active_parameters": "1.8B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "2048",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-1.8B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-1.8B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-0.5B",
+    "name": "Qwen1.5-0.5B",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-0.5B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-0.5B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "0.5B",
+      "active_parameters": "0.5B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "1024",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-0.5B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-0.5B",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-0.5B-Chat",
+    "name": "Qwen1.5-0.5B-Chat",
+    "release_date": "2024-02-04",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "0.5B",
+      "active_parameters": "0.5B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "1024",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-0.5B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen",
     "name": "Qwen",
     "release_date": "nan",
-    "from": "Alibaba Cloud",
+    "from": "qwenlm",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2772,135 +3407,836 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
-    "id": "ai21/jurassic-2",
-    "name": "Jurassic-2",
-    "release_date": "nan",
-    "from": "ai21",
+    "id": "Qwen/Qwen1.5-MoE-A2.7B",
+    "name": "Qwen1.5-MoE-A2.7B",
+    "release_date": "2024-02-29",
+    "from": "qwenlm",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
-      "link": "",
-      "raw": ""
+      "link": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/raw/main/README.md"
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "14.3B",
+      "active_parameters": "2.7B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "8192",
+      "vocab_size": "152064",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B",
+    "paper": "-",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "Qwen/Qwen1.5-MoE-A2.7B-Chat",
+    "name": "Qwen1.5-MoE-A2.7B-Chat",
+    "release_date": "2024-02-29",
+    "from": "qwenlm",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "Mixture of Experts",
+      "insights": [],
+      "parameters": "14.3B",
+      "active_parameters": "2.7B",
+      "context_size": "32768",
+      "tokenizer": "Qwen2Tokenizer",
+      "hidden_size": "2048",
+      "vocab_size": "151936",
+      "positional_embedding": "RoPE",
+      "attention_variant": "Multi-head Attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "-"
+    },
+    "license": "tongyi-qianwen-research",
+    "license_url": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B-Chat",
+    "paper": "-",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Qwen 1.5 GitHub Repository",
+        "url": "https://github.com/QwenLM/Qwen1.5"
+      },
+      {
+        "type": "blog",
+        "title": "Qwen 1.5 Blog Post",
+        "url": "https://qwenlm.github.io/blog/qwen1.5/"
+      }
+    ],
+    "updated": "2024-05-25"
   },
   {
     "id": "ai21/jamba",
     "name": "Jamba",
-    "release_date": "nan",
+    "release_date": "2024-03-28",
     "from": "ai21",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
-      "link": "",
-      "raw": ""
+      "link": "https://huggingface.co/ai21labs/Jamba-v0.1/blob/main/README.md",
+      "raw": "https://huggingface.co/ai21labs/Jamba-v0.1/raw/main/README.md"
     },
     "model": {
       "architecture": "SMM-Transformer Hybrid",
-      "subtype": "SSM-Transformer",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "Mixture-of-Experts",
+      "insights": [],
+      "parameters": "52B",
+      "active_parameters": "12B",
+      "context_size": "256K",
+      "tokenizer": "BPE",
+      "hidden_size": "4096",
+      "vocab_size": "64K",
+      "positional_embedding": "No PE",
+      "attention_variant": "Grouped-query Attention",
+      "activation": "SwiGLU"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "-"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/ai21labs/Jamba-v0.1",
+    "paper": "https://arxiv.org/abs/2403.19887",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "blog-post",
+        "title": "Announcement Blog Post",
+        "url": "https://www.ai21.com/blog/announcing-jamba"
       }
     ],
     "updated": "2024-05-24"
   },
   {
-    "id": "01.ai/yi",
-    "name": "Yi",
-    "release_date": "nan",
+    "id": "01-ai/Yi-9B",
+    "name": "Yi-9B",
+    "release_date": "2024-03-01",
     "from": "01.ai",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
-      "link": "",
-      "raw": ""
+      "link": "https://huggingface.co/01-ai/Yi-9B/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-9B/raw/main/README.md"
     },
     "model": {
       "architecture": "Transformer",
-      "subtype": "nan",
-      "insights": [
-        "nan"
-      ],
-      "parameters": "nan",
-      "active_parameters": "nan",
-      "context_size": "nan",
-      "tokenizer": "nan",
-      "hidden_size": "nan",
-      "vocab_size": "nan",
-      "positional_embedding": "nan",
-      "attention_variant": "nan",
-      "activation": "nan"
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
     },
     "training": {
-      "tokens": "nan"
+      "tokens": "3.8T"
     },
-    "license": "nan",
-    "license_url": "nan",
-    "download": "nan",
-    "paper": "nan",
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-9B/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-9B",
+    "paper": "https://arxiv.org/abs/2403.04652",
     "bonus": [
       {
-        "type": "",
-        "title": "",
-        "url": ""
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-9B-200K",
+    "name": "Yi-9B-200K",
+    "release_date": "2024-03-16",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-9B-200K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-9B-200K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "200K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.8T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-9B-200K/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-9B-200K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-6B",
+    "name": "Yi-6B",
+    "release_date": "2023-11-01",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-6B/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-6B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "6B",
+      "active_parameters": "6B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-6B/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-6B",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-6B-Chat",
+    "name": "Yi-6B-Chat",
+    "release_date": "2023-11-22",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-6B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-6B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "6B",
+      "active_parameters": "6B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-6B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-6B-Chat",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-6B-200K",
+    "name": "Yi-6B-200K",
+    "release_date": "2023-11-06",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-6B-200K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-6B-200K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "6B",
+      "active_parameters": "6B",
+      "context_size": "200K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-6B-200K/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-6B-200K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-34B-Chat",
+    "name": "Yi-34B-Chat",
+    "release_date": "2023-11-22",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-34B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-34B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-34B-Chat/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-34B-Chat",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-34B-200K",
+    "name": "Yi-34B-200K",
+    "release_date": "2023-11-06",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-34B-200K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-34B-200K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "200K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3T"
+    },
+    "license": "yi-license",
+    "license_url": "https://huggingface.co/01-ai/Yi-34B-200K/blob/main/LICENSE",
+    "download": "https://huggingface.co/01-ai/Yi-34B-200K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": "Yi GitHub Repository",
+        "url": "https://github.com/01-ai/Yi"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-9B",
+    "name": "Yi-1.5-9B",
+    "release_date": "2024-05-11",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-9B/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-9B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-9B",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-9B-Chat",
+    "name": "Yi-1.5-9B-Chat",
+    "release_date": "2024-05-10",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-9B-Chat-16K",
+    "name": "Yi-1.5-9B-Chat-16K",
+    "release_date": "2024-05-10",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "16K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-9B-32K",
+    "name": "Yi-1.5-9B-32K",
+    "release_date": "2024-05-15",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-9B-32K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-9B-32K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "9B",
+      "active_parameters": "9B",
+      "context_size": "32K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-9B-32K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-6B",
+    "name": "Yi-1.5-6B",
+    "release_date": "2024-05-11",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-6B/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-6B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "6B",
+      "active_parameters": "6B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-6B",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-6B-Chat",
+    "name": "Yi-1.5-6B-Chat",
+    "release_date": "2024-05-11",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-6B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-6B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "6B",
+      "active_parameters": "6B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "4096",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-6B-Chat",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-34B",
+    "name": "Yi-1.5-34B",
+    "release_date": "2024-05-11",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-34B/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-34B/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-34B",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-34B-Chat",
+    "name": "Yi-1.5-34B-Chat",
+    "release_date": "2024-05-10",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "4096",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-34B-Chat-16K",
+    "name": "Yi-1.5-34B-Chat-16K",
+    "release_date": "2024-05-15",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat-16K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat-16K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "16K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-34B-Chat-16K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
+  },
+  {
+    "id": "01-ai/Yi-1.5-34B-32K",
+    "name": "Yi-1.5-34B-32K",
+    "release_date": "2024-05-15",
+    "from": "01.ai",
+    "usage_type": "GP-LLM",
+    "description": "",
+    "readme": {
+      "link": "https://huggingface.co/01-ai/Yi-1.5-34B-32K/blob/main/README.md",
+      "raw": "https://huggingface.co/01-ai/Yi-1.5-34B-32K/raw/main/README.md"
+    },
+    "model": {
+      "architecture": "Transformer",
+      "subtype": "decoder-only",
+      "insights": [],
+      "parameters": "34B",
+      "active_parameters": "34B",
+      "context_size": "32K",
+      "tokenizer": "SentencePiece",
+      "hidden_size": "7168",
+      "vocab_size": " 64000",
+      "positional_embedding": "RoPE",
+      "attention_variant": "grouped-query-attention",
+      "activation": "SwiGLU"
+    },
+    "training": {
+      "tokens": "3.6T"
+    },
+    "license": "Apache License 2.0",
+    "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+    "download": "https://huggingface.co/01-ai/Yi-1.5-34B-32K",
+    "paper": "https://arxiv.org/abs/2403.04652",
+    "bonus": [
+      {
+        "type": "repo",
+        "title": " Yi-1.5 GitHub Repository",
+        "url": "https://github.com/01-ai/Yi-1.5"
+      }
+    ],
+    "updated": "2024-05-25"
   }
 ]

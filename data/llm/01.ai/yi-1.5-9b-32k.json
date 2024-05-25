@@ -1,0 +1,41 @@
+{
+  "id": "01-ai/Yi-1.5-9B-32K",
+  "name": "Yi-1.5-9B-32K",
+  "release_date": "2024-05-15",
+  "from": "01.ai",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "https://huggingface.co/01-ai/Yi-1.5-9B-32K/blob/main/README.md",
+    "raw": "https://huggingface.co/01-ai/Yi-1.5-9B-32K/raw/main/README.md"
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [],
+    "parameters": "9B",
+    "active_parameters": "9B",
+    "context_size": "32K",
+    "tokenizer": "SentencePiece",
+    "hidden_size": "4096",
+    "vocab_size": " 64000",
+    "positional_embedding": "RoPE",
+    "attention_variant": "grouped-query-attention",
+    "activation": "SwiGLU"
+  },
+  "training": {
+    "tokens": "3.6T"
+  },
+  "license": "Apache License 2.0",
+  "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+  "download": "https://huggingface.co/01-ai/Yi-1.5-9B-32K",
+  "paper": "https://arxiv.org/abs/2403.04652",
+  "bonus": [
+    {
+      "type": "repo",
+      "title": " Yi-1.5 GitHub Repository",
+      "url": "https://github.com/01-ai/Yi-1.5"
+    }
+  ],
+  "updated": "2024-05-25"
+}

@@ -1,7 +1,7 @@
 {
   "id": "anthropic/claude_3_haiku",
   "name": "Claude 3 Haiku",
-  "release_date": "nan",
+  "release_date": "2024-03-04",
   "from": "Anthropic",
   "usage_type": "GP-LLM",
   "description": "",
@@ -11,32 +11,32 @@
   },
   "model": {
     "architecture": "Transformer",
-    "subtype": "nan",
+    "subtype": "-",
     "insights": [
-      "nan"
+      "-"
     ],
-    "parameters": "nan",
-    "active_parameters": "nan",
-    "context_size": "nan",
-    "tokenizer": "nan",
-    "hidden_size": "nan",
-    "vocab_size": "nan",
-    "positional_embedding": "nan",
-    "attention_variant": "nan",
-    "activation": "nan"
+    "parameters": "-",
+    "active_parameters": "-",
+    "context_size": "-",
+    "tokenizer": "-",
+    "hidden_size": "-",
+    "vocab_size": "-",
+    "positional_embedding": "-",
+    "attention_variant": "-",
+    "activation": "-"
   },
   "training": {
-    "tokens": "nan"
+    "tokens": "-"
   },
-  "license": "nan",
-  "license_url": "nan",
-  "download": "nan",
-  "paper": "nan",
+  "license": "",
+  "license_url": "",
+  "download": "",
+  "paper": "",
   "bonus": [
     {
-      "type": "",
-      "title": "",
-      "url": ""
+      "type": "blog",
+      "title": "Introducing the next generation of Claude",
+      "url": "https://www.anthropic.com/news/claude-3-family"
     }
   ],
   "updated": "2024-05-24"

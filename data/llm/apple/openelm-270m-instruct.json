@@ -2,7 +2,7 @@
   "id": "apple/openelm-270m-instruct",
   "name": "OpenELM-270M-Instruct",
   "release_date": "2024-04-22",
-  "from": "Apple",
+  "from": "apple",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
@@ -13,8 +13,8 @@
     "architecture": "Transformer",
     "subtype": "decoder-only",
     "insights": [
-      "layer-wise scaling",
-      "flash attention"
+      "layer-wise-scaling",
+      "flash-attention"
     ],
     "parameters": "270M",
     "active_parameters": "270M",
@@ -40,6 +40,5 @@
       "url": "https://github.com/apple/corenet"
     }
   ],
-  "updated": "2024-05-24",
-  "date": "2024-05-24"
+  "updated": "2024-05-25"
 }

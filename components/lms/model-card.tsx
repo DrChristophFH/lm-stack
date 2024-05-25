@@ -1,4 +1,5 @@
 import {
+  ArrowUpRight,
   Copy,
   Download,
   GraduationCap,
@@ -25,24 +26,39 @@ import { Separator } from "@/components/ui/separator"
 import { LLM } from "@/lib/types/llm"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import { Badge } from "../ui/badge"
+import { Insights } from "@/lib/types/insights"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card"
+import InsightBadge from "./insight-badge"
 
 interface ModelCardProps {
   llm: LLM | null;
+  insights: Insights | null;
   className?: string;
 }
 
-const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
-  if (!llm) {
+const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
+  if (!llm || !insights) {
     return null;
   }
+
+  const company = insights.companies[llm.from];
+  const fall_back_file = llm.from.replace(" ", "_").toLowerCase() + `.svg`
+
+  const logo_path = `logos/` + (
+    company ? company.logo :
+      llm.logo_file ? llm.logo_file :
+        fall_back_file
+  )
 
   return (
     <Card className={cn("overflow-hidden h-min", className)}>
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
-          <AvatarImage src={llm.logo_file ? `logos/${llm.logo_file}` : `logos/${llm.from.replace(" ", "_").toLowerCase()}.svg`} alt={llm.from.replace(" ", "_").toLowerCase()} className="object-scale-down p-1" />
+          <AvatarImage src={logo_path} className="object-scale-down p-1" />
           <AvatarFallback className="text-accent-background">
-            {llm.from.charAt(0).toUpperCase() + llm.from.slice(1)}
+            {company ? company.name : llm.from}
           </AvatarFallback>
         </Avatar>
         <div className="grid gap-0.5">
@@ -117,14 +133,22 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
               </span>
             </li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
-            <Button disabled={llm.download === ""} variant="outline" className="grow" onClick={() => window.open(llm.download)}>
-              Download
-              <Download className="ml-2 h-4 w-4" />
+          <div className="grid grid-cols-2 gap-4 justify-items-stretch">
+            <Button disabled={llm.download === ""} asChild={llm.download !== ""} variant="outline" className={llm.paper !== "" ? "gap-1" : "border-rose-400 bg-rose-300"}>
+              {llm.download === "" ? "Closed Source" : (
+                <Link href={llm.download}>
+                  Download
+                  <Download className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
-            <Button disabled={llm.paper === ""} variant="outline" className="grow" onClick={() => window.open(llm.paper)}>
-              Paper
-              <GraduationCap className="ml-2 h-4 w-4" />
+            <Button disabled={llm.paper === ""} asChild={llm.paper !== ""} variant="outline" className="gap-1">
+              {llm.paper === "" ? "No Paper" : (
+                <Link href={llm.paper}>
+                  Paper
+                  <GraduationCap className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
           </div>
         </div>
@@ -167,6 +191,14 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
                   {llm.model.active_parameters}
                 </span>
               </div>
+            </div>
+            <div className="flex flex-wrap col-span-2 gap-2">
+              <span className="text-muted-foreground mr-4">
+                Additional Insights
+              </span>
+              {llm.model.insights.map((insight, index) => (
+                <InsightBadge insight={insight} insights={insights} key={index} />
+              ))}
             </div>
           </div>
         </div>
