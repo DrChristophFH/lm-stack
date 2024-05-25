@@ -1,0 +1,46 @@
+{
+  "id": "Qwen/qwen_1.5",
+  "name": "Qwen1.5-4B-Chat",
+  "release_date": "2024-02-04",
+  "from": "Alibaba Cloud",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/blob/main/README.md",
+    "raw": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/raw/main/README.md"
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [],
+    "parameters": "4B",
+    "active_parameters": "4B",
+    "context_size": "32768",
+    "tokenizer": "Qwen2Tokenizer",
+    "hidden_size": "2560",
+    "vocab_size": "151936",
+    "positional_embedding": "RoPE",
+    "attention_variant": "Multi-head Attention",
+    "activation": "SwiGLU"
+  },
+  "training": {
+    "tokens": "-"
+  },
+  "license": "tongyi-qianwen-research",
+  "license_url": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat/blob/main/LICENSE",
+  "download": "https://huggingface.co/Qwen/Qwen1.5-4B-Chat",
+  "paper": "-",
+  "bonus": [
+    {
+      "type": "repo",
+      "title": "Qwen 1.5 GitHub Repository",
+      "url": "https://github.com/QwenLM/Qwen1.5"
+    },
+    {
+      "type": "blog",
+      "title": "Qwen 1.5 Blog Post",
+      "url": "https://qwenlm.github.io/blog/qwen1.5/"
+    }
+  ],
+  "updated": "2024-05-24"
+}
