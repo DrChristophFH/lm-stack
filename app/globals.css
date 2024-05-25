@@ -64,6 +64,10 @@
       --input: 217.2 32.6% 17.5%;
       --ring: 212.7 26.8% 83.9%;
     }
+
+    .vis-item.closed-source {
+      @apply border-rose-400 bg-rose-300;
+    }
   }
 
   @layer base {

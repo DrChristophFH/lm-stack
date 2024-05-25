@@ -30,11 +30,15 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
     }
   }, [readme]);
 
+  if (!readme) {
+    return null;
+  }
+
   return (
     <Card className="xl:col-span-2">
       <CardHeader className="flex flex-row items-center">
         <CardTitle>Readme</CardTitle>
-        {readme && readme.link && (
+        {readme.link && (
           <Button asChild size="sm" className="ml-auto gap-1">
             <Link href={readme.link}>
               View

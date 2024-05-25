@@ -1,13 +1,13 @@
 {
-  "id": "Qwen/ Qwen1.5-MoE-A2.7B",
-  "name": " Qwen1.5-MoE-A2.7B",
+  "id": "Qwen/Qwen1.5-MoE-A2.7B",
+  "name": "Qwen1.5-MoE-A2.7B",
   "release_date": "2024-02-29",
   "from": "qwenlm",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
-    "link": "https://huggingface.co/Qwen/ Qwen1.5-MoE-A2.7B/blob/main/README.md",
-    "raw": "https://huggingface.co/Qwen/ Qwen1.5-MoE-A2.7B/raw/main/README.md"
+    "link": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/blob/main/README.md",
+    "raw": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/raw/main/README.md"
   },
   "model": {
     "architecture": "Transformer",
@@ -27,8 +27,8 @@
     "tokens": "-"
   },
   "license": "tongyi-qianwen-research",
-  "license_url": "https://huggingface.co/Qwen/ Qwen1.5-MoE-A2.7B/blob/main/LICENSE",
-  "download": "https://huggingface.co/Qwen/ Qwen1.5-MoE-A2.7B",
+  "license_url": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B/blob/main/LICENSE",
+  "download": "https://huggingface.co/Qwen/Qwen1.5-MoE-A2.7B",
   "paper": "-",
   "bonus": [
     {

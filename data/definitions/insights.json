@@ -23,6 +23,11 @@
       "name": "Qwen",
       "url": "https://qwenlm.github.io/",
       "logo": "qwen.svg"
+    },
+    "01.ai": {
+      "name": "01.AI",
+      "url": "https://www.01.ai/",
+      "logo": "01-ai.webp"
     }
   }
 }

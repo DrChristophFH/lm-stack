@@ -30,6 +30,7 @@ import Link from "next/link"
 import { Badge } from "../ui/badge"
 import { Insights } from "@/lib/types/insights"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card"
+import InsightBadge from "./insight-badge"
 
 interface ModelCardProps {
   llm: LLM | null;
@@ -42,13 +43,22 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
     return null;
   }
 
+  const company = insights.companies[llm.from];
+  const fall_back_file = llm.from.replace(" ", "_").toLowerCase() + `.svg`
+
+  const logo_path = `logos/` + (
+    company ? company.logo :
+      llm.logo_file ? llm.logo_file :
+        fall_back_file
+  )
+
   return (
     <Card className={cn("overflow-hidden h-min", className)}>
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
         <Avatar className="h-12 w-12 self-center mr-2">
-          <AvatarImage src={llm.logo_file ? `logos/${llm.logo_file}` : `logos/${llm.from.replace(" ", "_").toLowerCase()}.svg`} alt={llm.from.replace(" ", "_").toLowerCase()} className="object-scale-down p-1" />
+          <AvatarImage src={logo_path} className="object-scale-down p-1" />
           <AvatarFallback className="text-accent-background">
-            {llm.from.charAt(0).toUpperCase() + llm.from.slice(1)}
+            {company ? company.name : llm.from}
           </AvatarFallback>
         </Avatar>
         <div className="grid gap-0.5">
@@ -124,17 +134,21 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
             </li>
           </ul>
           <div className="grid grid-cols-2 gap-4 justify-items-stretch">
-            <Button disabled={llm.download === ""} asChild variant="outline" className="gap-1">
-              <Link href={llm.download}>
-                Download
-                <Download className="ml-2 h-4 w-4" />
-              </Link>
+            <Button disabled={llm.download === ""} asChild={llm.download !== ""} variant="outline" className={llm.paper !== "" ? "gap-1" : "border-rose-400 bg-rose-300"}>
+              {llm.download === "" ? "Closed Source" : (
+                <Link href={llm.download}>
+                  Download
+                  <Download className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
-            <Button disabled={llm.paper === ""} asChild variant="outline" className="gap-1">
-              <Link href={llm.paper}>
-                Paper
-                <GraduationCap className="ml-2 h-4 w-4" />
-              </Link>
+            <Button disabled={llm.paper === ""} asChild={llm.paper !== ""} variant="outline" className="gap-1">
+              {llm.paper === "" ? "No Paper" : (
+                <Link href={llm.paper}>
+                  Paper
+                  <GraduationCap className="ml-2 h-4 w-4" />
+                </Link>
+              )}
             </Button>
           </div>
         </div>
@@ -183,31 +197,7 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
                 Additional Insights
               </span>
               {llm.model.insights.map((insight, index) => (
-                <HoverCard>
-                  <HoverCardTrigger>
-                    <Badge key={index} className={'bg-' + insights.model_insights[insight].color + (
-                      parseInt(insights.model_insights[insight].color.split('-')[1]) < 500 ? ' text-black' : ' text-white'
-                    )}>
-                      {insights.model_insights[insight].name}
-                    </Badge>
-                  </HoverCardTrigger>
-                  <HoverCardContent>
-                    <div className="space-y-1">
-                      <h4 className="text-sm font-semibold">{insights.model_insights[insight].name}</h4>
-                      <p className="text-sm">
-                        {insights.model_insights[insight].description}
-                      </p>
-                      <div className="flex">
-                        <Button asChild variant="link" className="">
-                          <Link href={insights.model_insights[insight].url} className="flex ml-auto gap-1 link flex flex-row items-center text-purple-800">
-                            Paper
-                            <ArrowUpRight className="h-4 w-4" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </HoverCardContent>
-                </HoverCard>
+                <InsightBadge insight={insight} insights={insights} key={index} />
               ))}
             </div>
           </div>

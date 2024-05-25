@@ -37,8 +37,8 @@ export default function Dashboard() {
       setInsights(data);
     }
 
-    fetchLLMs();
     fetchInsights();
+    fetchLLMs();
   }, [])
 
   let selectCallback = (llm: LLM) => {
@@ -48,24 +48,22 @@ export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <Header></Header>
-      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-8">
-        <div className="grid md:gap-8">
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle>LLM Timeline</CardTitle>
-              <div className="flex flex-row items-center space-x-2">
-                <span className="text-sm text-gray-500">ℹ️ Click on a model to view more details</span>
-                <BotMessageSquare />
-              </div>
-            </CardHeader>
-            <CardContent>
-              <LlmTimeline llms={llms} selectCallback={selectCallback} />
-            </CardContent>
-          </Card>
-        </div>
+      <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-4">
+        <Card>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle>LLM Timeline</CardTitle>
+            <div className="flex flex-row items-center space-x-2">
+              <span className="text-sm text-gray-500">ℹ️ Click on a model to view more details</span>
+              <BotMessageSquare />
+            </div>
+          </CardHeader>
+          <CardContent>
+            <LlmTimeline llms={llms} insights={insights} selectCallback={selectCallback} />
+          </CardContent>
+        </Card>
         <div className="grid gap-4 grid-cols-1 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <ModelReadme readme={selectedLLM?.readme}></ModelReadme>
-          <ModelCard llm={selectedLLM} insights={insights} className="order-first lg:order-1"/>
+          <ModelCard llm={selectedLLM} insights={insights} className="order-first lg:order-1" />
         </div>
       </main>
     </div>
