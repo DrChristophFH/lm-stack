@@ -1,5 +1,5 @@
 {
-  "id": "alibaba_cloud/qwen",
+  "id": "Qwen/Qwen",
   "name": "Qwen",
   "release_date": "nan",
   "from": "Alibaba Cloud",
@@ -39,5 +39,5 @@
       "url": ""
     }
   ],
-  "updated": "2024-05-24"
+  "updated": "2024-05-25"
 }
