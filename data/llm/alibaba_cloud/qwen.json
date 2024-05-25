@@ -2,7 +2,7 @@
   "id": "Qwen/Qwen",
   "name": "Qwen",
   "release_date": "nan",
-  "from": "Alibaba Cloud",
+  "from": "qwenlm",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {

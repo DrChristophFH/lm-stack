@@ -19,10 +19,10 @@
       "url": "https://machinelearning.apple.com/",
       "logo": "apple.svg"
     },
-    "apple2": {
-      "name": "Apple",
-      "url": "https://machinelearning.apple.com/",
-      "logo": "apple.svg"
+    "qwenlm": {
+      "name": "Qwen",
+      "url": "https://qwenlm.github.io/",
+      "logo": "qwen.svg"
     }
   }
 }

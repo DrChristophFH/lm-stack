@@ -2,7 +2,7 @@
   "id": "Qwen/Qwen1.5-72B-Chat",
   "name": "Qwen1.5-72B-Chat",
   "release_date": "2024-02-04",
-  "from": "Alibaba Cloud",
+  "from": "qwenlm",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
