@@ -25,7 +25,7 @@ export interface Bonus {
 
 export interface Readme {
   raw?: string;
-  url?: string;
+  link?: string;
 }
 
 export interface LLM {

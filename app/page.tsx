@@ -16,11 +16,13 @@ import { Header } from "@/components/lms/header"
 import LlmTimeline from "@/components/lms/llm-timeline"
 import ModelCard from "@/components/lms/model-card"
 import ModelReadme from "@/components/lms/model-readme"
+import { Insights } from "@/lib/types/insights"
 
 
 export default function Dashboard() {
   const [llms, setLLMs] = useState<LLM[]>([]);
   const [selectedLLM, setSelectedLLM] = useState<LLM | null>(null);
+  const [insights, setInsights] = useState<Insights | null>(null);
 
   useEffect(() => {
     const fetchLLMs = async () => {
@@ -29,7 +31,14 @@ export default function Dashboard() {
       setLLMs(data);
     };
 
+    const fetchInsights = async () => {
+      const response = await fetch('generated/insights.json');
+      const data: Insights = await response.json();
+      setInsights(data);
+    }
+
     fetchLLMs();
+    fetchInsights();
   }, [])
 
   let selectCallback = (llm: LLM) => {
@@ -56,7 +65,7 @@ export default function Dashboard() {
         </div>
         <div className="grid gap-4 grid-cols-1 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <ModelReadme readme={selectedLLM?.readme}></ModelReadme>
-          <ModelCard llm={selectedLLM} className="order-first lg:order-1"/>
+          <ModelCard llm={selectedLLM} insights={insights} className="order-first lg:order-1"/>
         </div>
       </main>
     </div>

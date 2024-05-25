@@ -8,6 +8,12 @@ const config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
 	],
+  safelist: [
+    {
+      pattern: /bg-.+/,
+      variants: ['lg', 'hover', 'focus', 'lg:hover'],
+    },
+  ],
   prefix: "",
   theme: {
     container: {

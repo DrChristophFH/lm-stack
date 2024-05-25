@@ -1,4 +1,5 @@
 import {
+  ArrowUpRight,
   Copy,
   Download,
   GraduationCap,
@@ -25,14 +26,19 @@ import { Separator } from "@/components/ui/separator"
 import { LLM } from "@/lib/types/llm"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
+import { Badge } from "../ui/badge"
+import { Insights } from "@/lib/types/insights"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card"
 
 interface ModelCardProps {
   llm: LLM | null;
+  insights: Insights | null;
   className?: string;
 }
 
-const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
-  if (!llm) {
+const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
+  if (!llm || !insights) {
     return null;
   }
 
@@ -117,14 +123,18 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
               </span>
             </li>
           </ul>
-          <div className="grid grid-cols-2 gap-4">
-            <Button disabled={llm.download === ""} variant="outline" className="grow" onClick={() => window.open(llm.download)}>
-              Download
-              <Download className="ml-2 h-4 w-4" />
+          <div className="grid grid-cols-2 gap-4 justify-items-stretch">
+            <Button disabled={llm.download === ""} asChild variant="outline" className="gap-1">
+              <Link href={llm.download}>
+                Download
+                <Download className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button disabled={llm.paper === ""} variant="outline" className="grow" onClick={() => window.open(llm.paper)}>
-              Paper
-              <GraduationCap className="ml-2 h-4 w-4" />
+            <Button disabled={llm.paper === ""} asChild variant="outline" className="gap-1">
+              <Link href={llm.paper}>
+                Paper
+                <GraduationCap className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </div>
@@ -167,6 +177,38 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, className}) => {
                   {llm.model.active_parameters}
                 </span>
               </div>
+            </div>
+            <div className="flex flex-wrap col-span-2 gap-2">
+              <span className="text-muted-foreground mr-4">
+                Additional Insights
+              </span>
+              {llm.model.insights.map((insight, index) => (
+                <HoverCard>
+                  <HoverCardTrigger>
+                    <Badge key={index} className={'bg-' + insights.model_insights[insight].color + (
+                      parseInt(insights.model_insights[insight].color.split('-')[1]) < 500 ? ' text-black' : ' text-white'
+                    )}>
+                      {insights.model_insights[insight].name}
+                    </Badge>
+                  </HoverCardTrigger>
+                  <HoverCardContent>
+                    <div className="space-y-1">
+                      <h4 className="text-sm font-semibold">{insights.model_insights[insight].name}</h4>
+                      <p className="text-sm">
+                        {insights.model_insights[insight].description}
+                      </p>
+                      <div className="flex">
+                        <Button asChild variant="link" className="">
+                          <Link href={insights.model_insights[insight].url} className="flex ml-auto gap-1 link flex flex-row items-center text-purple-800">
+                            Paper
+                            <ArrowUpRight className="h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </HoverCardContent>
+                </HoverCard>
+              ))}
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
   "id": "apple/openelm-3b-instruct",
   "name": "OpenELM-3B-Instruct",
   "release_date": "2024-04-22",
-  "from": "Apple",
+  "from": "apple",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
@@ -13,8 +13,8 @@
     "architecture": "Transformer",
     "subtype": "decoder-only",
     "insights": [
-      "layer-wise scaling",
-      "flash attention"
+      "layer-wise-scaling",
+      "flash-attention"
     ],
     "parameters": "3B",
     "active_parameters": "3B",
@@ -40,6 +40,5 @@
       "url": "https://github.com/apple/corenet"
     }
   ],
-  "updated": "2024-05-24",
-  "date": "2024-05-24"
+  "updated": "2024-05-25"
 }

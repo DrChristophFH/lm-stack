@@ -478,49 +478,6 @@
     "updated": "2024-05-24"
   },
   {
-    "id": "microsoft/phi-3-small",
-    "name": "phi-3-small",
-    "release_date": "TBA",
-    "from": "microsoft",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "grouped-query attention",
-        "blocksparse attention"
-      ],
-      "parameters": "7B",
-      "active_parameters": "7B",
-      "context_size": "8192.0",
-      "tokenizer": "tiktoken",
-      "hidden_size": "4096.0",
-      "vocab_size": "100352.0",
-      "positional_embedding": "",
-      "attention_variant": "",
-      "activation": ""
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "",
-    "download": "nan",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
     "id": "microsoft/phi-3-small-4k-instruct",
     "name": "Phi-3-small-4k-instruct",
     "release_date": "2024-05-21",
@@ -685,48 +642,6 @@
     "license": "MIT",
     "license_url": "https://choosealicense.com/licenses/mit/",
     "download": "https://huggingface.co/microsoft/Phi-3-mini-4k-instruct",
-    "paper": "https://arxiv.org/abs/2404.14219",
-    "bonus": [
-      {
-        "type": "",
-        "title": "",
-        "url": ""
-      }
-    ],
-    "updated": "2024-05-24"
-  },
-  {
-    "id": "microsoft/phi-3-medium",
-    "name": "phi-3-medium",
-    "release_date": "TBA",
-    "from": "microsoft",
-    "description": "",
-    "readme": {
-      "link": "",
-      "raw": ""
-    },
-    "model": {
-      "architecture": "Transformer",
-      "subtype": "decoder-only",
-      "insights": [
-        "Llama-2 similar block structure"
-      ],
-      "parameters": "14B",
-      "active_parameters": "14B",
-      "context_size": "8192.0",
-      "tokenizer": "LLaMA 1",
-      "hidden_size": "5120.0",
-      "vocab_size": "100352.0",
-      "positional_embedding": "",
-      "attention_variant": "",
-      "activation": ""
-    },
-    "training": {
-      "tokens": "4.8T"
-    },
-    "license": "TBA",
-    "license_url": "",
-    "download": "nan",
     "paper": "https://arxiv.org/abs/2404.14219",
     "bonus": [
       {
@@ -2074,7 +1989,7 @@
     "id": "apple/openelm-450m",
     "name": "OpenELM-450M",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2085,8 +2000,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "470M",
       "active_parameters": "470M",
@@ -2112,14 +2027,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-450m-instruct",
     "name": "OpenELM-450M-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2130,8 +2044,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "470M",
       "active_parameters": "470M",
@@ -2157,14 +2071,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-3b",
     "name": "OpenELM-3B",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2175,8 +2088,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "3B",
       "active_parameters": "3B",
@@ -2202,14 +2115,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-3b-instruct",
     "name": "OpenELM-3B-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2220,8 +2132,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "3B",
       "active_parameters": "3B",
@@ -2247,14 +2159,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-270m",
     "name": "OpenELM-270M",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2265,8 +2176,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "270M",
       "active_parameters": "270M",
@@ -2284,7 +2195,7 @@
     "license": "Apple-sample-code-license",
     "license_url": "https://huggingface.co/apple/OpenELM-270M/blob/main/LICENSE",
     "download": "https://huggingface.co/apple/OpenELM-270M",
-    "paper": "https://arxiv.org/pdf/2404.14619",
+    "paper": "https://arxiv.org/abs/2404.14619",
     "bonus": [
       {
         "type": "repo",
@@ -2292,14 +2203,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-270m-instruct",
     "name": "OpenELM-270M-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2310,8 +2220,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "270M",
       "active_parameters": "270M",
@@ -2337,14 +2247,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-1_1b",
     "name": "OpenELM-1_1B",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2355,8 +2264,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "1.1B",
       "active_parameters": "1.1B",
@@ -2382,14 +2291,13 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "apple/openelm-1_1b-instruct",
     "name": "OpenELM-1_1B-Instruct",
     "release_date": "2024-04-22",
-    "from": "Apple",
+    "from": "apple",
     "usage_type": "GP-LLM",
     "description": "",
     "readme": {
@@ -2400,8 +2308,8 @@
       "architecture": "Transformer",
       "subtype": "decoder-only",
       "insights": [
-        "layer-wise scaling",
-        "flash attention"
+        "layer-wise-scaling",
+        "flash-attention"
       ],
       "parameters": "1.1B",
       "active_parameters": "1.1B",
@@ -2427,8 +2335,7 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-24",
-    "date": "2024-05-24"
+    "updated": "2024-05-25"
   },
   {
     "id": "anthropic/claude_3_sonnet",

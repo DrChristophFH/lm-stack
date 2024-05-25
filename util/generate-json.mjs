@@ -27,6 +27,9 @@ async function buildLLMJson() {
 
     writeFileSync(outputPath, JSON.stringify(llms, null, 2), 'utf8');
 
+    let insights = readFileSync(join(process.cwd(), 'data/definitions/insights.json'), 'utf8');
+    writeFileSync(join(process.cwd(), 'public/generated', 'insights.json'), insights, 'utf8');
+
     console.log('LLM data has been compiled!');
   } catch (error) {
     console.error('Error compiling LLM data:', error);
