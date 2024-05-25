@@ -14,7 +14,7 @@
     "subtype": "decoder-only",
     "insights": [],
     "parameters": "34B",
-    "active_parameters": "6B",
+    "active_parameters": "34B",
     "context_size": "200K",
     "tokenizer": "SentencePiece",
     "hidden_size": "7168",

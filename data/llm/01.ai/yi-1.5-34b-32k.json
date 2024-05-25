@@ -1,13 +1,13 @@
 {
   "id": "01-ai/Yi-6B",
-  "name": "Yi-34B-Chat",
-  "release_date": "2023-11-22",
+  "name": "Yi-1.5-34B-32K",
+  "release_date": "2024-05-15",
   "from": "01.ai",
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
-    "link": "https://huggingface.co/apple/Yi-34B-Chat/blob/main/README.md",
-    "raw": "https://huggingface.co/apple/Yi-34B-Chat/raw/main/README.md"
+    "link": "https://huggingface.co/apple/Yi-1.5-34B-32K/blob/main/README.md",
+    "raw": "https://huggingface.co/apple/Yi-1.5-34B-32K/raw/main/README.md"
   },
   "model": {
     "architecture": "Transformer",
@@ -15,7 +15,7 @@
     "insights": [],
     "parameters": "34B",
     "active_parameters": "34B",
-    "context_size": "4096",
+    "context_size": "32K",
     "tokenizer": "SentencePiece",
     "hidden_size": "7168",
     "vocab_size": " 64000",
@@ -24,17 +24,17 @@
     "activation": "SwiGLU"
   },
   "training": {
-    "tokens": "3T"
+    "tokens": "3.6T"
   },
-  "license": "yi-license",
-  "license_url": "https://huggingface.co/01-ai/Yi-34B-Chat/blob/main/LICENSE",
-  "download": "https://huggingface.co/01-ai/Yi-34B-Chat",
+  "license": "Apache License 2.0",
+  "license_url": "https://choosealicense.com/licenses/apache-2.0/",
+  "download": "https://huggingface.co/01-ai/Yi-1.5-34B-32K",
   "paper": "https://arxiv.org/abs/2403.04652",
   "bonus": [
     {
       "type": "repo",
-      "title": "Yi GitHub Repository",
-      "url": "https://github.com/01-ai/Yi"
+      "title": " Yi-1.5 GitHub Repository",
+      "url": "https://github.com/01-ai/Yi-1.5"
     }
   ],
   "updated": "2024-05-25"
