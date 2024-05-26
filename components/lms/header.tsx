@@ -5,6 +5,7 @@ import Icon from '@/public/icon.svg'
 
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react";
+import ProposeModel from "./propose-llm";
 
 export function Header() {
   return (
@@ -23,6 +24,7 @@ export function Header() {
           </div>
         </form>
       </div>
+      <ProposeModel />
     </header>
   );
 }
