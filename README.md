@@ -11,7 +11,11 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 ## TODO
 
 **Public Relations**
-- [ ] GitHub Props (to project page, stars)
+- [ ] GitHub Props
+  - [x] To Repository
+  - [x] To Author
+  - [ ] To Contributors
+  - [ ] To Libraries Used (in ReadMe)
 - [ ] Contributer List
 
 **Models**
