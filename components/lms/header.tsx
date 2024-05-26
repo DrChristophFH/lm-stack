@@ -8,7 +8,7 @@ import { Search } from "lucide-react";
 
 export function Header() {
   return (
-    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 z-10">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 z-20">
       <nav className="flex items-center space-x-1">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Image src={Icon} alt={""} className="h-6 w-auto" />
