@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Copy,
   Download,
   GraduationCap,
@@ -27,9 +26,7 @@ import { LLM } from "@/lib/types/llm"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { cn } from "@/lib/utils"
 import Link from "next/link"
-import { Badge } from "../ui/badge"
 import { Insights } from "@/lib/types/insights"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card"
 import InsightBadge from "./insight-badge"
 
 interface ModelCardProps {
