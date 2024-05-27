@@ -17,6 +17,7 @@ import LlmTimeline from "@/components/lms/llm-timeline"
 import ModelCard from "@/components/lms/model-card"
 import ModelReadme from "@/components/lms/model-readme"
 import { Insights } from "@/lib/types/insights"
+import { Footer } from "@/components/lms/footer"
 
 
 export default function Dashboard() {
@@ -66,6 +67,7 @@ export default function Dashboard() {
           <ModelCard llm={selectedLLM} insights={insights} className="order-first lg:order-1" />
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
