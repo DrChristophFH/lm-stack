@@ -5,6 +5,11 @@ import Icon from '@/public/icon.svg'
 
 import { Input } from "@/components/ui/input"
 import { Search } from "lucide-react";
+import ProposeModel from "./propose-llm";
+import { buttonVariants } from "../ui/button";
+import { cn } from "@/lib/utils";
+import { Icons } from "../ui/icons";
+import { siteConfig } from "@/config/site";
 
 export function Header() {
   return (
@@ -23,6 +28,26 @@ export function Header() {
           </div>
         </form>
       </div>
+      <ProposeModel />
+      <nav className="flex items-center">
+        <Link
+          href={siteConfig.links.github}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div
+            className={cn(
+              buttonVariants({
+                variant: "ghost",
+              }),
+              "w-9 px-0"
+            )}
+          >
+            <Icons.gitHub className="h-4 w-4" />
+            <span className="sr-only">GitHub</span>
+          </div>
+        </Link>
+      </nav>
     </header>
   );
 }
