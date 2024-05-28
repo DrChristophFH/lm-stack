@@ -242,7 +242,7 @@ const ProposeModel: React.FC<ProposeModelProps> = ({ }) => {
                 )}
               />
             </div>
-            <Accordion type="multiple" collapsible className="mt-8">
+            <Accordion type="multiple" className="mt-8">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Model Details</AccordionTrigger>
                 <AccordionContent className="grid gird-cols-1 sm:grid-cols-2 gap-4">
