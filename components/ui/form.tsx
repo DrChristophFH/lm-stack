@@ -12,6 +12,8 @@ import {
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
+import { Info } from "lucide-react"
+import { Popover, PopoverContent, PopoverTrigger } from "./popover"
 
 const Form = FormProvider
 
@@ -125,18 +127,38 @@ FormControl.displayName = "FormControl"
 
 const FormDescription = React.forwardRef<
   HTMLParagraphElement,
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLParagraphElement> & { variant?: string }
+>(({ className, variant, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
 
-  return (
-    <p
-      ref={ref}
-      id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
-      {...props}
-    />
-  )
+  if (variant === "info-hover") {
+    return (
+      <div className="inline-flex items-center align-text-bottom">
+        <Popover>
+          <PopoverTrigger>
+            <Info className="ml-2 h-4 w-4 text-muted-foreground" />
+          </PopoverTrigger>
+          <PopoverContent side="top">
+            <p
+              ref={ref}
+              id={formDescriptionId}
+              className={cn("text-sm text-muted-foreground", className)}
+              {...props}
+            />
+          </PopoverContent>
+        </Popover>
+      </div>
+    )
+  } else {
+    return (
+      <p
+        ref={ref}
+        id={formDescriptionId}
+        className={cn("text-sm text-muted-foreground", className)}
+        {...props}
+      />
+    )
+  }
 })
 FormDescription.displayName = "FormDescription"
 
