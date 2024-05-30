@@ -1,7 +1,10 @@
 import {
+  ArrowRightFromLine,
   Copy,
   Download,
+  FileJson,
   GraduationCap,
+  Mail,
   MoreVertical,
 } from "lucide-react"
 
@@ -17,8 +20,14 @@ import {
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Separator } from "@/components/ui/separator"
@@ -49,6 +58,20 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
         fall_back_file
   )
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(JSON.stringify(llm, null, 2))
+  }
+
+  const exportToJSON = () => {
+    const data = new Blob([JSON.stringify(llm, null, 2)], { type: 'application/json' });
+    const url = window.URL.createObjectURL(data);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'model.json';
+    a.click();
+    window.URL.revokeObjectURL(url);
+  }
+
   return (
     <Card className={cn("overflow-hidden h-min", className)}>
       <CardHeader className="flex flex-row items-start bg-muted/50 py-6 pr-6 pl-4">
@@ -61,8 +84,12 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
         <div className="grid gap-0.5">
           <CardTitle className="group flex items-center gap-2 text-lg">
             {llm.name}
-            <Button size="icon" variant="outline" className="h-6 w-6 opacity-0 transition-opacity group-hover:opacity-100">
-              {/* TODO */}
+            <Button
+              size="icon"
+              variant="outline"
+              className="h-6 w-6 opacity-0 transition-opacity group-hover:opacity-100"
+              onClick={copyToClipboard}
+            >
               <Copy className="h-3 w-3" />
             </Button>
           </CardTitle>
@@ -83,10 +110,36 @@ const ModelCard: React.FC<ModelCardProps> = ({ llm, insights, className }) => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem>Edit</DropdownMenuItem>
-              <DropdownMenuItem>Export</DropdownMenuItem>
+              <DropdownMenuLabel>{llm.name}</DropdownMenuLabel>
+              <DropdownMenuItem>
+                <Mail className="mr-2 h-4 w-4" />
+                <span>Propose Change</span>
+              </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Trash</DropdownMenuItem>
+              <DropdownMenuGroup>
+                <DropdownMenuItem onSelect={copyToClipboard}>
+                  <Copy className="mr-2 h-4 w-4" />
+                  <span>Copy</span>
+                </DropdownMenuItem>
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger>
+                    <ArrowRightFromLine className="mr-2 h-4 w-4" />
+                    <span>Export</span>
+                  </DropdownMenuSubTrigger>
+                  <DropdownMenuPortal>
+                    <DropdownMenuSubContent>
+                      <DropdownMenuItem onSelect={exportToJSON}>
+                        <FileJson className="mr-2 h-4 w-4" />
+                        <span>JSON</span>
+                      </DropdownMenuItem>
+                      {/* <DropdownMenuItem>
+                        <MessageSquare className="mr-2 h-4 w-4" />
+                        <span>XML</span>
+                      </DropdownMenuItem> */}
+                    </DropdownMenuSubContent>
+                  </DropdownMenuPortal>
+                </DropdownMenuSub>
+              </DropdownMenuGroup>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
