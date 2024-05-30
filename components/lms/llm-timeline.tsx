@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Timeline } from "vis-timeline/esnext";
 import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
@@ -30,11 +30,6 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
       window.history.pushState({ path: newURL }, '', newURL);
     }
   };
-
-  // listen for popstate event to update state
-  window.addEventListener('popstate', (event) => {
-    navigateToURL();
-  });
 
   const now = new Date(); // today
   const future = new Date().setDate(now.getDate() + 30); // today + 30 days
@@ -98,13 +93,13 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     if (selected) {
       const llm = llms.find((llm) => llm.id === selected);
       if (llm) {
-        timeline.setSelection([selected]);   
+        timeline.setSelection([selected]);
         selectCallback(llm);
       }
     }
   }
 
-  const setupTimeline = () : Timeline => {
+  const setupTimeline = (): Timeline => {
     if (!container.current) throw new Error("Container not found");
 
     let newTimeline = new Timeline(container.current, items, options);
@@ -125,7 +120,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     return newTimeline;
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!container.current) return;
 
     const newTimeline = setupTimeline();
@@ -135,6 +130,15 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
       newTimeline.destroy();
     };
   }, [container, llms]);
+
+  // listen for popstate event to update state
+  useEffect(() => {
+    addEventListener('popstate', navigateToURL);
+
+    return () => {
+      removeEventListener('popstate', navigateToURL);
+    };
+  });
 
   if (!insights) {
     return null;
