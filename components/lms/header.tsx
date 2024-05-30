@@ -10,6 +10,7 @@ import { buttonVariants } from "../ui/button";
 import { cn } from "@/lib/utils";
 import { Icons } from "../ui/icons";
 import { siteConfig } from "@/config/site";
+import { ModeToggle } from "../mode-toggle";
 
 export function Header() {
   return (
@@ -21,6 +22,7 @@ export function Header() {
         </Link>
       </nav>
       <div className="flex items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
+        <ModeToggle />
         <form className="ml-auto flex-1 sm:flex-initial">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />

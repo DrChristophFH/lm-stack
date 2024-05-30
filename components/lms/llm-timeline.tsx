@@ -1,6 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Timeline } from "vis-timeline/esnext";
-import 'vis-timeline/styles/vis-timeline-graph2d.css';
 
 import { LLM } from "@/lib/types/llm"
 import React from "react";

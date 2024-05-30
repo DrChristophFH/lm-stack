@@ -39,10 +39,11 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 **General Functionality**
 - [x] Copy Model Card Json to Clipboard
 - [x] Export Model Card Json to File
-- [ ] Selected Model as URL Param
+- [x] Selected Model as URL Param
 
 **Visual Improvements**
-- [ ] Dark Mode
+- [x] Dark Mode
+  - [ ] Fix for readmes
 
 **Informational Content**
 - [ ] Information on Fields in Model Card
