@@ -19,6 +19,22 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   const container = useRef(null);
   const [timeline, setTimeline] = useState<Timeline | null>(null);
   const [expanded, setExpanded] = useState(false);
+  const [state, setState] = useState({});
+
+  // Update URL with new state without reloading the page
+  const updateURL = (newState: any) => {
+    if (newState && newState !== state) {
+      setState(newState);
+      const newParams = new URLSearchParams(newState).toString();
+      const newURL = `${window.location.pathname}?${newParams}`;
+      window.history.pushState({ path: newURL }, '', newURL);
+    }
+  };
+
+  // listen for popstate event to update state
+  window.addEventListener('popstate', (event) => {
+    navigateToURL();
+  });
 
   const now = new Date(); // today
   const future = new Date().setDate(now.getDate() + 30); // today + 30 days
@@ -73,12 +89,25 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     end: future, // today + 30 days
   };
 
-  useEffect(() => {
-    if (!container.current) return;
+  // navigate to URL based on selected parameter
+  const navigateToURL = () => {
+    if (!timeline) return;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const selected = urlParams.get("selected");
+    if (selected) {
+      const llm = llms.find((llm) => llm.id === selected);
+      if (llm) {
+        timeline.setSelection([selected]);   
+        selectCallback(llm);
+      }
+    }
+  }
+
+  const setupTimeline = () : Timeline => {
+    if (!container.current) throw new Error("Container not found");
 
     let newTimeline = new Timeline(container.current, items, options);
-
-    setTimeline(newTimeline);
 
     newTimeline.on("click", function (properties) {
       let item = properties.item;
@@ -86,8 +115,21 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
         let llm = llms.find((llm) => llm.id === item);
         if (!llm) return;
         selectCallback(llm);
+        updateURL({ ...state, selected: llm.id });
       }
     });
+
+    // if selected is in the URL, select it
+    navigateToURL();
+
+    return newTimeline;
+  }
+
+  useEffect(() => {
+    if (!container.current) return;
+
+    const newTimeline = setupTimeline();
+    setTimeline(newTimeline);
 
     return () => {
       newTimeline.destroy();
