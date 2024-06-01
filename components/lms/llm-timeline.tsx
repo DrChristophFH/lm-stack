@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { use, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Timeline } from "vis-timeline/esnext";
 
 import { LLM } from "@/lib/types/llm"
@@ -212,15 +212,18 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
     setParentGroups(newParentGroups);
     setItems(newItems);
+  }
 
+  // update timeline items 
+  useLayoutEffect(() => {
     if (timeline) {
       if (groupByParent) {
-        timeline.setItems(newParentGroups);
+        timeline.setItems(parentGroups);
       } else {
-        timeline.setItems(newItems);
+        timeline.setItems(items);
       }
     }
-  }
+  }, [items, parentGroups]);
 
   // update timeline items when llms change
   useEffect(() => {
