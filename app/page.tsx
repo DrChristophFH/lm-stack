@@ -38,7 +38,7 @@ export default function Dashboard() {
 
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <Header></Header>
+      <Header llms={llms} selectCallback={selectCallback}></Header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-4">
         <LlmTimeline llms={llms} insights={insights} selectCallback={selectCallback} />
         <div className="grid gap-4 grid-cols-1 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">

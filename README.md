@@ -31,7 +31,7 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 - [x] Grouped view of Models
   - [x] parent model field in model card
   - [x] Popover select child models in parent graph?
-- [ ] Model Search
+- [x] Model Search
 - [ ] Model Filtering
 - [ ] Zoom to date range
 
@@ -44,6 +44,7 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 - [x] Dark Mode
   - [x] Fix for readmes
 - [ ] Model Card Copy Button Animation or something
+- [ ] Dropdown for Grouped Model Item with Closed Source Markers is ugly
 
 **Informational Content**
 - [ ] Information on Fields in Model Card
