@@ -1,21 +1,5 @@
 'use client'
 
-import {
-  ArrowRightFromLine,
-  BotMessageSquare,
-  Check,
-  Copy,
-  FileJson,
-  Mail,
-  MoreVertical,
-} from "lucide-react"
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import React, { useEffect, useState } from "react"
 import { LLM } from "@/lib/types/llm"
 import { Header } from "@/components/lms/header"
@@ -24,8 +8,6 @@ import ModelCard from "@/components/lms/model-card"
 import ModelReadme from "@/components/lms/model-readme"
 import { Insights } from "@/lib/types/insights"
 import { Footer } from "@/components/lms/footer"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
 
 
 export default function Dashboard() {

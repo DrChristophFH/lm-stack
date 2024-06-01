@@ -255,7 +255,9 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   useEffect(() => {
     if (!container.current) return;
 
-    let newTimeline = new Timeline(container.current, items, options);
+    let timelineItems = groupByParent ? parentGroups : items;
+
+    let newTimeline = new Timeline(container.current, timelineItems, options);
 
     setTimeline(newTimeline);
 

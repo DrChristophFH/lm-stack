@@ -28,9 +28,9 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 - [ ] Add more models
 
 **Timeline Control**
-- [ ] Grouped view of Models
-  - [ ] parent model field in model card
-  - [ ] Popover select child models in parent graph?
+- [x] Grouped view of Models
+  - [x] parent model field in model card
+  - [x] Popover select child models in parent graph?
 - [ ] Model Search
 - [ ] Model Filtering
 - [ ] Zoom to date range
@@ -42,7 +42,7 @@ To add a new model, you need to create a new model .json file in the `data/llm` 
 
 **Visual Improvements**
 - [x] Dark Mode
-  - [ ] Fix for readmes
+  - [x] Fix for readmes
 - [ ] Model Card Copy Button Animation or something
 
 **Informational Content**
