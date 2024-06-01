@@ -2,6 +2,7 @@
   "id": "snowflake/arcitc_instruct",
   "name": "Arcitc instruct",
   "release_date": "2024-04-24",
+  "parent": "Arctic",
   "from": "Snowflake",
   "usage_type": "GP-LLM",
   "description": "",

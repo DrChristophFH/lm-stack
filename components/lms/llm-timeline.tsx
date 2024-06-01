@@ -8,7 +8,8 @@ import { Button } from "../ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
 import { Insights } from "@/lib/types/insights";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { differenceInCalendarDays } from "date-fns";
 
 interface Props {
   llms: LLM[];
@@ -21,9 +22,10 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   const [timeline, setTimeline] = useState<Timeline | null>(null);
   const [expanded, setExpanded] = useState(false);
   const [state, setState] = useState({});
-  const [groupByParent, setGroupByParent] = useState(false);
+  const [groupByParent, setGroupByParent] = useState(true);
   const [items, setItems] = useState<any[]>([]);
   const [parentGroups, setParentGroups] = useState<any[]>([]);
+  const [selectedParent, setSelectedParent] = useState<any>(null);
 
   // Update URL with new state without reloading the page
   const updateURL = (newState: any) => {
@@ -36,18 +38,31 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   };
 
   const selectItemOnClick: ((properties: any) => void) = function (properties) {
-    let item = properties.item;
-    if (item) {
-      let llm = llms.find((llm) => llm.id === item);
-      if (llm) {
-        selectCallback(llm);
-        updateURL({ ...state, selected: llm.id });
-      }
+    let llm = properties.llm ? properties.llm : llms.find((llm) => llm.id === properties.item);
+
+    if (llm) {
+      selectCallback(llm);
+      updateURL({ ...state, selected: llm.id });
     }
   };
 
+  const showDialogOnClick: ((properties: any) => void) = function (properties) {
+    let item = parentGroups.find((group) => group.id === properties.item);
+
+    if (item && item.items.length > 1) {
+      setSelectedParent({
+        item: item,
+        x: properties.event.x,
+        y: properties.event.y,
+      });
+    } else {
+      setSelectedParent(null);
+    }
+  }
+
   const now = new Date(); // today
-  const future = new Date().setDate(now.getDate() + 30); // today + 30 days
+  const future = new Date(); // today + 30 days
+  future.setDate(future.getDate() + 30);
 
   const options: any = {
     stack: true,
@@ -77,16 +92,6 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
         selectCallback(llm);
       }
     }
-  }
-
-  const setupTimeline = (): Timeline => {
-    if (!container.current) throw new Error("Container not found");
-
-    let newTimeline = new Timeline(container.current, items, options);
-
-    newTimeline.on("click", selectItemOnClick);
-
-    return newTimeline;
   }
 
   const transformItems = (llms: LLM[]) => {
@@ -128,25 +133,44 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
     let newParentGroups = newItems.reduce((acc: any[], item: any) => { // group by parent
       // if no parent, create a single item for the model
-      if (!item.data.parent) { 
+      if (!item.data.parent) {
         acc.push({
           id: item.id,
           content: item.content,
           start: item.start,
           items: [item.id],
+          className: item.className,
         });
         return acc;
       }
-  
+
       const existingEntry = acc.find((entry) => entry.id === item.data.parent);
       const llm = item.data;
 
       if (existingEntry) {
         existingEntry.items.push(item.id); // add child id to the parents items
-        
+
         // update parent start to earliest child start
         if (item.start < existingEntry.start) {
           existingEntry.start = item.start;
+        }
+
+        // update parent potentialEnd to latest child start
+        if (item.start > existingEntry.potentialEnd) {
+          existingEntry.potentialEnd = item.start;
+        }
+
+        // if the parent would span more than 1 month, set end to make it a span item
+        if (differenceInCalendarDays(existingEntry.potentialEnd, existingEntry.start) > 30) {
+          existingEntry.end = existingEntry.potentialEnd;
+        }
+
+        // if any child but not every child is closed-source, set parent to semi-closed-source
+        if (
+          existingEntry.className === 'closed-source' && item.className !== 'closed-source' ||
+          existingEntry.className !== 'closed-source' && item.className === 'closed-source'
+        ) {
+          existingEntry.className = "semi-closed-source";
         }
 
         return acc;
@@ -179,13 +203,23 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
         id: item.data.parent,
         content: parentContent,
         start: item.start,
+        potentialEnd: item.start,
         items: [item.id],
+        className: item.className,
       });
       return acc;
     }, []);
 
     setParentGroups(newParentGroups);
     setItems(newItems);
+
+    if (timeline) {
+      if (groupByParent) {
+        timeline.setItems(newParentGroups);
+      } else {
+        timeline.setItems(newItems);
+      }
+    }
   }
 
   // update timeline items when llms change
@@ -195,14 +229,34 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
   // update selected on timeline change
   useEffect(() => {
+    if (!timeline) return;
+
     selectURLSelected();
+
+    timeline.on("click", selectItemOnClick);
+
+    return () => {
+      timeline.off("click", selectItemOnClick);
+    };
   }, [timeline]);
 
-  // setup timeline effect
+  // update event listener for showing parent group dialog when parent or timeline changes
+  useEffect(() => {
+    if (!timeline) return;
+
+    timeline.on("click", showDialogOnClick);
+
+    return () => {
+      timeline.off("click", showDialogOnClick);
+    };
+  }, [timeline, parentGroups]);
+
+  // setup timeline on mount
   useEffect(() => {
     if (!container.current) return;
 
-    const newTimeline = setupTimeline();
+    let newTimeline = new Timeline(container.current, items, options);
+
     setTimeline(newTimeline);
 
     return () => {
@@ -243,7 +297,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
       timeline?.setOptions({ ...options, minHeight: "400px", maxHeight: "400px" });
       setExpanded(false);
     } else {
-      timeline?.setOptions({ ...options, minHeight: "800px", maxHeight: "800px" });
+      timeline?.setOptions({ ...options, minHeight: "700px", maxHeight: "700px" });
       setExpanded(true);
     }
   }
@@ -300,6 +354,24 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
           </div>
           <div ref={container}></div>
         </div>
+        {selectedParent && (
+          <DropdownMenu open onOpenChange={(open) => !open && setSelectedParent(null)}>
+            <DropdownMenuContent align="end" style={{ position: "absolute", top: selectedParent.y, left: selectedParent.x }}
+            className="z-10 w-max">
+              <DropdownMenuLabel>{selectedParent.item.id}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {selectedParent.item.items.map((item: string) => {
+                let llm = llms.find((llm) => llm.id === item);
+                if (!llm) return null;
+                return (
+                  <DropdownMenuItem key={llm.id} onSelect={() => selectItemOnClick({ llm: llm })} className={llm.download ? "" : "bg-closed-source"}>
+                    <span>{llm.name}</span>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        )}
       </CardContent>
     </Card>
   );

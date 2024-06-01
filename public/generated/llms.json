@@ -46,6 +46,7 @@
     "id": "snowflake/arcitc_instruct",
     "name": "Arcitc instruct",
     "release_date": "2024-04-24",
+    "parent": "Arctic",
     "from": "Snowflake",
     "usage_type": "GP-LLM",
     "description": "",
@@ -89,6 +90,7 @@
     "id": "snowflake/arcitc_base",
     "name": "Arcitc base",
     "release_date": "2024-04-24",
+    "parent": "Arctic",
     "from": "Snowflake",
     "usage_type": "GP-LLM",
     "description": "",
@@ -520,7 +522,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-3-small-128k-instruct",
@@ -565,7 +567,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-3-mini-4k-instruct",
@@ -609,7 +611,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-3-mini-128k-instruct",
@@ -654,7 +656,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-3-medium-4k-instruct",
@@ -698,7 +700,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-3-medium-128k-instruct",
@@ -742,7 +744,7 @@
       }
     ],
     "updated": "2024-05-24",
-    "parent": "microsoft/phi-3"
+    "parent": "Phi-3"
   },
   {
     "id": "microsoft/phi-2",
@@ -914,7 +916,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA"
   },
   {
     "id": "meta/llama_65b",
@@ -957,7 +960,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA"
   },
   {
     "id": "meta/llama_33b",
@@ -1000,7 +1004,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA"
   },
   {
     "id": "meta/llama_13b",
@@ -1043,7 +1048,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA"
   },
   {
     "id": "meta/llama-3_8b_instruct",
@@ -1086,7 +1092,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-3"
   },
   {
     "id": "meta/llama-3_8b",
@@ -1129,7 +1136,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-3"
   },
   {
     "id": "meta/llama-3_70b_instruct",
@@ -1172,7 +1180,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-3"
   },
   {
     "id": "meta/llama-3_70b",
@@ -1215,7 +1224,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-3"
   },
   {
     "id": "meta/llama-3_400b",
@@ -1258,7 +1268,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-3"
   },
   {
     "id": "meta/llama-2_7b_chat",
@@ -1301,7 +1312,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "meta/llama-2_7b",
@@ -1344,7 +1356,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "meta/llama-2_70b_chat",
@@ -1387,7 +1400,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "meta/llama-2_70b",
@@ -1430,7 +1444,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "meta/llama-2_13b_chat",
@@ -1473,7 +1488,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "meta/llama-2_13b",
@@ -1516,7 +1532,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "LLaMA-2"
   },
   {
     "id": "google/gemma",
@@ -2034,7 +2051,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-450m-instruct",
@@ -2079,7 +2096,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-3b",
@@ -2124,7 +2141,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-3b-instruct",
@@ -2169,7 +2186,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-270m",
@@ -2214,7 +2231,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-270m-instruct",
@@ -2259,7 +2276,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-1_1b",
@@ -2304,7 +2321,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "apple/openelm-1_1b-instruct",
@@ -2349,7 +2366,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "apple/openelm"
+    "parent": "OpenELM"
   },
   {
     "id": "anthropic/claude_instant_1.2",
@@ -2395,7 +2412,7 @@
   {
     "id": "anthropic/claude_3_sonnet",
     "name": "Claude 3 Sonnet",
-    "parent": "anthropic/claude_3",
+    "parent": "Claude 3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2439,7 +2456,7 @@
   {
     "id": "anthropic/claude_3_opus",
     "name": "Claude 3 Opus",
-    "parent": "anthropic/claude_3",
+    "parent": "Claude 3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2483,7 +2500,7 @@
   {
     "id": "anthropic/claude_3_haiku",
     "name": "Claude 3 Haiku",
-    "parent": "anthropic/claude_3",
+    "parent": "Claude 3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2692,7 +2709,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-MoE-A2.7B-Chat",
@@ -2739,7 +2756,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-7B",
@@ -2786,7 +2803,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-7B-Chat",
@@ -2833,7 +2850,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-72B",
@@ -2880,7 +2897,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-72B-Chat",
@@ -2927,7 +2944,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-4B",
@@ -2974,7 +2991,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-4B-Chat",
@@ -3021,7 +3038,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-32B",
@@ -3068,7 +3085,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-32B-Chat",
@@ -3115,7 +3132,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-14B",
@@ -3162,7 +3179,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-14B-Chat",
@@ -3209,7 +3226,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-110B",
@@ -3256,7 +3273,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-110B-Chat",
@@ -3303,7 +3320,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-1.8B",
@@ -3350,7 +3367,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-1.8B-Chat",
@@ -3397,7 +3414,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-0.5B",
@@ -3444,7 +3461,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-0.5B-Chat",
@@ -3491,7 +3508,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "Qwen/Qwen1.5"
+    "parent": "Qwen1.5"
   },
   {
     "id": "Qwen/Qwen",
@@ -3617,7 +3634,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-9B-200K",
@@ -3659,7 +3676,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-6B",
@@ -3701,7 +3718,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-6B-Chat",
@@ -3743,7 +3760,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-6B-200K",
@@ -3785,7 +3802,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-34B-Chat",
@@ -3827,7 +3844,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-34B-200K",
@@ -3869,7 +3886,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi"
+    "parent": "Yi"
   },
   {
     "id": "01-ai/Yi-1.5-9B",
@@ -3911,7 +3928,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-Chat",
@@ -3953,7 +3970,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-Chat-16K",
@@ -3995,7 +4012,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-32K",
@@ -4037,7 +4054,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-6B",
@@ -4079,7 +4096,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-6B-Chat",
@@ -4121,7 +4138,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B",
@@ -4163,7 +4180,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-Chat",
@@ -4205,7 +4222,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-Chat-16K",
@@ -4247,7 +4264,7 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-32K",
@@ -4289,6 +4306,6 @@
       }
     ],
     "updated": "2024-05-25",
-    "parent": "01-ai/Yi-1.5"
+    "parent": "Yi-1.5"
   }
 ]

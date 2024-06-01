@@ -40,6 +40,8 @@
     --closed-source-foreground: 222.2 84% 4.9%;
     --closed-source-border: 5.5, 49.3%, 60%;
 
+    --semi-closed-source: 5.5, 49.3%, 82%;
+
     --lines: 214.3 31.8% 80.4%;
     --timeline: 202 33% 4%;
 
@@ -83,6 +85,8 @@
     --closed-source-foreground: 210 40% 98%;
     --closed-source-border: 0, 34.5%, 50%;
 
+    --semi-closed-source: 0, 34.5%, 42%;
+
     --lines: 202 13% 35%;
     --timeline: 202 33% 4%;
   }
@@ -98,7 +102,6 @@
   }
 }
 
-
 .vis-timeline {
   border-color: hsl(var(--border));
 }
@@ -113,6 +116,14 @@
   border-color: hsl(var(--lines));
 }
 
+.vis-item.semi-closed-source {
+  background: repeating-linear-gradient(45deg,
+      hsl(var(--closed-source)) 0,
+      hsl(var(--closed-source)) 10px,
+      hsl(var(--semi-closed-source)) 10px,
+      hsl(var(--semi-closed-source)) 20px);
+  color: hsl(var(--closed-source-foreground));
+}
 
 .vis-item.closed-source,
 .vis-item.closed-source.vis-dot {

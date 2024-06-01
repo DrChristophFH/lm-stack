@@ -1,7 +1,7 @@
 {
   "id": "anthropic/claude_3_opus",
   "name": "Claude 3 Opus",
-  "parent": "anthropic/claude_3",
+  "parent": "Claude 3",
   "release_date": "2024-03-04",
   "from": "Anthropic",
   "usage_type": "GP-LLM",
