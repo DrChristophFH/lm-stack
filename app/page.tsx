@@ -1,7 +1,13 @@
 'use client'
 
 import {
+  ArrowRightFromLine,
   BotMessageSquare,
+  Check,
+  Copy,
+  FileJson,
+  Mail,
+  MoreVertical,
 } from "lucide-react"
 
 import {
@@ -18,6 +24,8 @@ import ModelCard from "@/components/lms/model-card"
 import ModelReadme from "@/components/lms/model-readme"
 import { Insights } from "@/lib/types/insights"
 import { Footer } from "@/components/lms/footer"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuPortal, DropdownMenuSeparator, DropdownMenuSub, DropdownMenuSubContent, DropdownMenuSubTrigger, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Button } from "@/components/ui/button"
 
 
 export default function Dashboard() {
@@ -50,18 +58,7 @@ export default function Dashboard() {
     <div className="flex min-h-screen w-full flex-col">
       <Header></Header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-4">
-        <Card>
-          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle>LLM Timeline</CardTitle>
-            <div className="flex flex-row items-center space-x-2">
-              <span className="text-sm text-gray-500">ℹ️ Click on a model to view more details</span>
-              <BotMessageSquare />
-            </div>
-          </CardHeader>
-          <CardContent>
-            <LlmTimeline llms={llms} insights={insights} selectCallback={selectCallback} />
-          </CardContent>
-        </Card>
+        <LlmTimeline llms={llms} insights={insights} selectCallback={selectCallback} />
         <div className="grid gap-4 grid-cols-1 md:gap-8 lg:grid-cols-2 xl:grid-cols-3">
           <ModelReadme readme={selectedLLM?.readme}></ModelReadme>
           <ModelCard llm={selectedLLM} insights={insights} className="order-first lg:order-1" />

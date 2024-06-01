@@ -37,5 +37,6 @@
       "url": "https://github.com/01-ai/Yi"
     }
   ],
-  "updated": "2024-05-25"
+  "updated": "2024-05-25",
+  "parent": "Yi"
 }

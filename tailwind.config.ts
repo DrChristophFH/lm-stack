@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   safelist: [
     {
       pattern: /bg-.+/,
@@ -58,6 +58,9 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        closed: {
+          source: "hsl(var(--closed-source))",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
