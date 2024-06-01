@@ -47,7 +47,7 @@ const ModelReadme: React.FC<ModelReadmeProps> = ({ readme }) => {
           </Button>)
         }
       </CardHeader>
-      <CardContent className={markdown ? 'prose max-w-none min-w-48' : ''}>
+      <CardContent className={markdown ? 'prose dark:prose-invert max-w-none min-w-48' : ''}>
         {!readme || !markdown &&
           (
             <div className="flex justify-center content-center">
