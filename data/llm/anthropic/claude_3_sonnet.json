@@ -1,6 +1,7 @@
 {
   "id": "anthropic/claude_3_sonnet",
   "name": "Claude 3 Sonnet",
+  "parent": "anthropic/claude_3",
   "release_date": "2024-03-04",
   "from": "Anthropic",
   "usage_type": "GP-LLM",

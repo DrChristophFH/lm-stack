@@ -33,6 +33,7 @@ export interface LLM {
   name: string;
   release_date: string;
   from: string;
+  parent: string;
   logo_file?: string;
   usage_type: string;
   description: string;

@@ -519,7 +519,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-3-small-128k-instruct",
@@ -563,7 +564,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-3-mini-4k-instruct",
@@ -606,7 +608,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-3-mini-128k-instruct",
@@ -650,7 +653,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-3-medium-4k-instruct",
@@ -693,7 +697,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-3-medium-128k-instruct",
@@ -736,7 +741,8 @@
         "url": ""
       }
     ],
-    "updated": "2024-05-24"
+    "updated": "2024-05-24",
+    "parent": "microsoft/phi-3"
   },
   {
     "id": "microsoft/phi-2",
@@ -2027,7 +2033,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-450m-instruct",
@@ -2071,7 +2078,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-3b",
@@ -2115,7 +2123,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-3b-instruct",
@@ -2159,7 +2168,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-270m",
@@ -2203,7 +2213,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-270m-instruct",
@@ -2247,7 +2258,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-1_1b",
@@ -2291,7 +2303,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "apple/openelm-1_1b-instruct",
@@ -2335,7 +2348,8 @@
         "url": "https://github.com/apple/corenet"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "apple/openelm"
   },
   {
     "id": "anthropic/claude_instant_1.2",
@@ -2381,6 +2395,7 @@
   {
     "id": "anthropic/claude_3_sonnet",
     "name": "Claude 3 Sonnet",
+    "parent": "anthropic/claude_3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2424,6 +2439,7 @@
   {
     "id": "anthropic/claude_3_opus",
     "name": "Claude 3 Opus",
+    "parent": "anthropic/claude_3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2467,6 +2483,7 @@
   {
     "id": "anthropic/claude_3_haiku",
     "name": "Claude 3 Haiku",
+    "parent": "anthropic/claude_3",
     "release_date": "2024-03-04",
     "from": "Anthropic",
     "usage_type": "GP-LLM",
@@ -2674,7 +2691,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-MoE-A2.7B-Chat",
@@ -2720,7 +2738,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-7B",
@@ -2766,7 +2785,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-7B-Chat",
@@ -2812,7 +2832,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-72B",
@@ -2858,7 +2879,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-72B-Chat",
@@ -2904,7 +2926,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-4B",
@@ -2950,7 +2973,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-4B-Chat",
@@ -2996,7 +3020,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-32B",
@@ -3042,7 +3067,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-32B-Chat",
@@ -3088,7 +3114,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-14B",
@@ -3134,7 +3161,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-14B-Chat",
@@ -3180,7 +3208,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-110B",
@@ -3226,7 +3255,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-110B-Chat",
@@ -3272,7 +3302,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-1.8B",
@@ -3318,7 +3349,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-1.8B-Chat",
@@ -3364,7 +3396,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-0.5B",
@@ -3410,7 +3443,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen1.5-0.5B-Chat",
@@ -3456,7 +3490,8 @@
         "url": "https://qwenlm.github.io/blog/qwen1.5/"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "Qwen/Qwen1.5"
   },
   {
     "id": "Qwen/Qwen",
@@ -3581,7 +3616,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-9B-200K",
@@ -3622,7 +3658,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-6B",
@@ -3663,7 +3700,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-6B-Chat",
@@ -3704,7 +3742,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-6B-200K",
@@ -3745,7 +3784,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-34B-Chat",
@@ -3786,7 +3826,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-34B-200K",
@@ -3827,7 +3868,8 @@
         "url": "https://github.com/01-ai/Yi"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi"
   },
   {
     "id": "01-ai/Yi-1.5-9B",
@@ -3868,7 +3910,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-Chat",
@@ -3909,7 +3952,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-Chat-16K",
@@ -3950,7 +3994,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-9B-32K",
@@ -3991,7 +4036,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-6B",
@@ -4032,7 +4078,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-6B-Chat",
@@ -4073,7 +4120,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B",
@@ -4114,7 +4162,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-Chat",
@@ -4155,7 +4204,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-Chat-16K",
@@ -4196,7 +4246,8 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   },
   {
     "id": "01-ai/Yi-1.5-34B-32K",
@@ -4237,6 +4288,7 @@
         "url": "https://github.com/01-ai/Yi-1.5"
       }
     ],
-    "updated": "2024-05-25"
+    "updated": "2024-05-25",
+    "parent": "01-ai/Yi-1.5"
   }
 ]

@@ -42,5 +42,6 @@
       "url": "https://qwenlm.github.io/blog/qwen1.5/"
     }
   ],
-  "updated": "2024-05-25"
+  "updated": "2024-05-25",
+  "parent": "Qwen/Qwen1.5"
 }
