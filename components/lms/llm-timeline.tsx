@@ -256,6 +256,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
   // setup timeline on mount
   useEffect(() => {
+    console.log(container.current);
     if (!container.current) return;
 
     let timelineItems = groupByParent ? parentGroups : items;
