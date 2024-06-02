@@ -256,7 +256,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
   // setup timeline on mount
   useEffect(() => {
-    console.log(container.current);
+    console.log(container);
     if (!container.current) return;
 
     let timelineItems = groupByParent ? parentGroups : items;
@@ -268,7 +268,7 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     return () => {
       newTimeline.destroy();
     };
-  }, [container.current]);
+  }, [container]);
 
   // listen for popstate event to update state
   useEffect(() => {
