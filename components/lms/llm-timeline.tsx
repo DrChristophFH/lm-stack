@@ -1,4 +1,4 @@
-import { use, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { use, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Timeline } from "vis-timeline/esnext";
 
 import { LLM } from "@/lib/types/llm"
@@ -17,8 +17,29 @@ interface Props {
   selectCallback: (llm: LLM) => void;
 }
 
+const future = new Date(); // today + 30 days
+future.setDate(future.getDate() + 30);
+
+const options: any = {
+  stack: true,
+  showMajorLabels: true,
+  showMinorLabels: true,
+  verticalScroll: true,
+  zoomKey: "ctrlKey",
+  maxMinorChars: 4,
+  minHeight: "400px",
+  maxHeight: "400px",
+  start: new Date("2023-01-01"),
+  end: future, // today + 30 days
+};
+
 const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
-  const container = useRef(null);
+  const [tlNode, setTlNode] = useState<HTMLDivElement | null>(null);
+  const container = useCallback((node: any)  => {
+    if (node !== null) { 
+      setTlNode(node);
+    }
+  }, []);
   const [timeline, setTimeline] = useState<Timeline | null>(null);
   const [expanded, setExpanded] = useState(false);
   const [state, setState] = useState({});
@@ -27,26 +48,24 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
   const [parentGroups, setParentGroups] = useState<any[]>([]);
   const [selectedParent, setSelectedParent] = useState<any>(null);
 
-  // Update URL with new state without reloading the page
-  const updateURL = (newState: any) => {
-    if (newState && newState !== state) {
-      setState(newState);
-      const newParams = new URLSearchParams(newState).toString();
-      const newURL = `${window.location.pathname}?${newParams}`;
-      window.history.pushState({ path: newURL }, '', newURL);
-    }
-  };
-
-  const selectItemOnClick: ((properties: any) => void) = function (properties) {
+  const selectItemOnClick: ((properties: any) => void) = useCallback((properties) => {
     let llm = properties.llm ? properties.llm : llms.find((llm) => llm.id === properties.item);
 
     if (llm) {
       selectCallback(llm);
-      updateURL({ ...state, selected: llm.id });
-    }
-  };
 
-  const showDialogOnClick: ((properties: any) => void) = function (properties) {
+      let newState = { ...state, selected: llm.id };
+
+      if (newState && newState !== state) {
+        setState(newState);
+        const newParams = new URLSearchParams(newState).toString();
+        const newURL = `${window.location.pathname}?${newParams}`;
+        window.history.pushState({ path: newURL }, '', newURL);
+      }
+    }
+  }, [llms, selectCallback, state]);
+
+  const showDialogOnClick: ((properties: any) => void) = useCallback((properties) => {
     let item = parentGroups.find((group) => group.id === properties.item);
 
     if (item && item.items.length > 1) {
@@ -58,27 +77,10 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     } else {
       setSelectedParent(null);
     }
-  }
-
-  const now = new Date(); // today
-  const future = new Date(); // today + 30 days
-  future.setDate(future.getDate() + 30);
-
-  const options: any = {
-    stack: true,
-    showMajorLabels: true,
-    showMinorLabels: true,
-    verticalScroll: true,
-    zoomKey: "ctrlKey",
-    maxMinorChars: 4,
-    minHeight: "400px",
-    maxHeight: "400px",
-    start: new Date("2023-01-01"),
-    end: future, // today + 30 days
-  };
+  }, [parentGroups]);
 
   // navigate to URL based on selected parameter
-  const selectURLSelected = () => {
+  const selectURLSelected = useCallback(() => {
     if (!timeline) {
       return;
     }
@@ -92,9 +94,23 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
         selectCallback(llm);
       }
     }
-  }
+  }, [timeline, llms, selectCallback]);
 
-  const transformItems = (llms: LLM[]) => {
+  // update timeline items 
+  useLayoutEffect(() => {
+    console.log("update timeline items");
+    if (timeline) {
+      if (groupByParent) {
+        timeline.setItems(parentGroups);
+      } else {
+        timeline.setItems(items);
+      }
+    }
+  }, [timeline, groupByParent, items, parentGroups]);
+
+  // update items when llms change
+  useEffect(() => {
+    console.log("update items");
     let newItems = llms.filter((llm) => !(llm.release_date === "nan")).map((llm) => {
       const html = document.createElement("div");
       html.appendChild(document.createTextNode(llm.name));
@@ -212,26 +228,11 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
 
     setParentGroups(newParentGroups);
     setItems(newItems);
-  }
-
-  // update timeline items 
-  useLayoutEffect(() => {
-    if (timeline) {
-      if (groupByParent) {
-        timeline.setItems(parentGroups);
-      } else {
-        timeline.setItems(items);
-      }
-    }
-  }, [items, parentGroups]);
-
-  // update timeline items when llms change
-  useEffect(() => {
-    transformItems(llms);
-  }, [llms]);
+  }, [llms, insights]);
 
   // update selected on timeline change
   useEffect(() => {
+    console.log("update selected");
     if (!timeline) return;
 
     selectURLSelected();
@@ -241,10 +242,11 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     return () => {
       timeline.off("click", selectItemOnClick);
     };
-  }, [timeline]);
+  }, [timeline, selectURLSelected, selectItemOnClick]);
 
   // update event listener for showing parent group dialog when parent or timeline changes
   useEffect(() => {
+    console.log("update event listener");
     if (!timeline) return;
 
     timeline.on("click", showDialogOnClick);
@@ -252,23 +254,23 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
     return () => {
       timeline.off("click", showDialogOnClick);
     };
-  }, [timeline, parentGroups]);
+  }, [timeline, parentGroups, items, showDialogOnClick]);
 
   // setup timeline on mount
   useEffect(() => {
-    console.log(container);
-    if (!container.current) return;
+    console.log("setup timeline");
 
-    let timelineItems = groupByParent ? parentGroups : items;
+    console.log(tlNode);
+    if (!tlNode) return;
 
-    let newTimeline = new Timeline(container.current, timelineItems, options);
+    let newTimeline = new Timeline(tlNode, [], options);
 
     setTimeline(newTimeline);
 
     return () => {
       newTimeline.destroy();
     };
-  }, [container]);
+  }, [tlNode]);
 
   // listen for popstate event to update state
   useEffect(() => {
@@ -278,17 +280,6 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
       removeEventListener('popstate', selectURLSelected);
     };
   });
-
-  // update timeline when groupByParent changes
-  useEffect(() => {
-    if (!timeline) return;
-
-    if (groupByParent) {
-      timeline.setItems(parentGroups); // group items
-    } else {
-      timeline.setItems(items); // reset items
-    }
-  }, [groupByParent]);
 
   if (!insights) {
     return null;
@@ -358,12 +349,12 @@ const LlmTimeline: React.FC<Props> = ({ llms, insights, selectCallback }) => {
               </Tooltip>
             </TooltipProvider>
           </div>
-          <div ref={container}></div>
+          <div ref={container}>Help</div>
         </div>
         {selectedParent && (
           <DropdownMenu open onOpenChange={(open) => !open && setSelectedParent(null)}>
             <DropdownMenuContent align="end" style={{ position: "absolute", top: selectedParent.y, left: selectedParent.x }}
-            className="z-10 w-max">
+              className="z-10 w-max">
               <DropdownMenuLabel>{selectedParent.item.id}</DropdownMenuLabel>
               <DropdownMenuSeparator />
               {selectedParent.item.items.map((item: string) => {
