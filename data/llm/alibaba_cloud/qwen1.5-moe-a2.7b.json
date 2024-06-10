@@ -12,7 +12,9 @@
   "model": {
     "architecture": "Transformer",
     "subtype": "decoder-only",
-    "insights": [],
+    "insights": [
+      "moe"
+    ],
     "parameters": "14.3B",
     "active_parameters": "2.7B",
     "context_size": "32768",
