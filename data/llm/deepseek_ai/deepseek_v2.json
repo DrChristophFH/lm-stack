@@ -1,0 +1,38 @@
+{
+  "id": "deepseek-ai/DeepSeek-V2",
+  "name": "DeepSeek-V2",
+  "release_date": "2024-05-06",
+  "parent": "DeepSeek-V2",
+  "from": "deepseek-ai",
+  "usage_type": "GP-LLM",
+  "description": "",
+  "readme": {
+    "link": "https://huggingface.co/deepseek-ai/DeepSeek-V2/blob/main/README.md",
+    "raw": "https://huggingface.co/deepseek-ai/DeepSeek-V2/raw/main/README.md"
+  },
+  "model": {
+    "architecture": "Transformer",
+    "subtype": "decoder-only",
+    "insights": [
+      "moe",
+      "yarn"
+    ],
+    "parameters": "236B",
+    "active_parameters": "21B ",
+    "context_size": "128k",
+    "tokenizer": "bpe",
+    "hidden_size": "5120",
+    "vocab_size": "102400",
+    "positional_embedding": "rope",
+    "attention_variant": "multi-head-latent",
+    "activation": "swiglu"
+  },
+  "training": {
+    "tokens": "8.1T"
+  },
+  "license": "deepseek",
+  "license_url": "https://github.com/deepseek-ai/DeepSeek-V2/blob/main/LICENSE-MODEL",
+  "download": "https://huggingface.co/deepseek-ai/DeepSeek-V2",
+  "paper": "https://arxiv.org/abs/2405.04434",
+  "updated": "2024-06-10"
+}

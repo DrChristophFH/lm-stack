@@ -11,8 +11,10 @@
   },
   "model": {
     "architecture": "Transformer",
-    "subtype": "Mixture of Experts",
-    "insights": [],
+    "subtype": "decoder-only",
+    "insights": [
+      "moe"
+    ],
     "parameters": "14.3B",
     "active_parameters": "2.7B",
     "context_size": "32768",
