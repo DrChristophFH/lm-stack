@@ -6,7 +6,7 @@ import React from "react";
 import { Check, Expand, Minimize2, MoreVertical, RotateCcw } from "lucide-react";
 import { Button } from "../ui/button";
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "../ui/tooltip";
-import { Insights } from "@/lib/types/insights";
+import { Insights } from "@/lib/types/referenced-values";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { differenceInCalendarDays } from "date-fns";

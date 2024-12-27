@@ -6,7 +6,7 @@ import { Header } from "@/components/lms/header"
 import LlmTimeline from "@/components/lms/llm-timeline"
 import ModelCard from "@/components/lms/model-card"
 import ModelReadme from "@/components/lms/model-readme"
-import { Insights } from "@/lib/types/insights"
+import { Insights } from "@/lib/types/referenced-values"
 import { Footer } from "@/components/lms/footer"
 
 
