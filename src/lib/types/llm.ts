@@ -1,7 +1,6 @@
 export interface LLM {
   id: string;
   name: string;
-  derives_from?: string;
   family: string;
   release_date: string;
   from: string;
@@ -12,16 +11,16 @@ export interface LLM {
   training: Training;
   license: string;
   license_url?: string;
-  download?: string;
-  paper?: string;
+  download_url?: string;
+  paper_url?: string;
   bonus?: Bonus[];
   logo_file?: string;
   updated: string;
 }
 
 export interface Readme {
-  link: string;
-  raw?: string;
+  url: string;
+  raw_url?: string;
 }
 
 export interface Model {

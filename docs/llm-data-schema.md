@@ -37,8 +37,8 @@ A sample JSON object following the schema is shown below, describing the Apple O
   "usage_type": "GP-LLM",
   "description": "",
   "readme": {
-    "link": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/README.md",
-    "raw": "https://huggingface.co/apple/OpenELM-3B-Instruct/raw/main/README.md"
+    "url": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/README.md",
+    "raw_url": "https://huggingface.co/apple/OpenELM-3B-Instruct/raw/main/README.md"
   },
   "model": {
     "architecture": "Transformer",
@@ -62,8 +62,8 @@ A sample JSON object following the schema is shown below, describing the Apple O
   },
   "license_type": "Apple-sample-code-license",
   "license_url": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/LICENSE",
-  "download": "https://huggingface.co/apple/OpenELM-3B-Instruct",
-  "paper": "https://arxiv.org/pdf/2404.14619",
+  "download_url": "https://huggingface.co/apple/OpenELM-3B-Instruct",
+  "paper_url": "https://arxiv.org/pdf/2404.14619",
   "bonus": [
     {
       "type": "repo",
@@ -97,8 +97,8 @@ A sample JSON object following the schema is shown below, describing the Apple O
 | **training**     | `object` | Yes       | See [Training Object](#training-object).                                                                                                                                                                                                                                         |
 | **license_type** | `string` | Yes       | The short identifier for the license type. Might be used to deterimine the standard license url/source.                                                                                                                                                                          |
 | **license_url**  | `string` | Optional  | A link to the full text of the license for reference. If not provided, `license_type` will be used to determine the standard license url if available.                                                                                                                           |
-| **download**     | `string` | Optional  | Link to download or access the model.                                                                                                                                                                                                                                            |
-| **paper**        | `string` | Optional  | URL pointing to a paper or publication describing the model.                                                                                                                                                                                                                     |
+| **download_url** | `string` | Optional  | Link to download or access the model.                                                                                                                                                                                                                                            |
+| **paper_url**    | `string` | Optional  | URL pointing to a paper or publication describing the model.                                                                                                                                                                                                                     |
 | **bonus**        | `array`  | Optional  | An array of bonus resources. See [Bonus Array](#bonus-array).                                                                                                                                                                                                                    |
 | **logo_file**    | `string` | Optional  | The filename of the logo image for the model.                                                                                                                                                                                                                                    |
 | **updated**      | `string` | Yes       | The last updated date in `YYYY-MM-DD` format.                                                                                                                                                                                                                                    |
@@ -107,16 +107,16 @@ A sample JSON object following the schema is shown below, describing the Apple O
 
 ### Readme Object
 
-| Field    | Type     | Required? | Description                                                                                |
-| -------- | -------- | --------- | ------------------------------------------------------------------------------------------ |
-| **link** | `string` | Yes       | URL pointing to a README page, usually in a rendered form (e.g., on GitHub or HuggingFace) |
-| **raw**  | `string` | Optional  | URL pointing to the raw version of the README (plain text / Markdown)                      |
+| Field       | Type     | Required? | Description                                                                                |
+| ----------- | -------- | --------- | ------------------------------------------------------------------------------------------ |
+| **url**     | `string` | Yes       | URL pointing to a README page, usually in a rendered form (e.g., on GitHub or HuggingFace) |
+| **raw_url** | `string` | Optional  | URL pointing to the raw version of the README (plain text / Markdown)                      |
 
 **Example**:
 ```json
 "readme": {
-  "link": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/README.md",
-  "raw": "https://huggingface.co/apple/OpenELM-3B-Instruct/raw/main/README.md"
+  "url": "https://huggingface.co/apple/OpenELM-3B-Instruct/blob/main/README.md",
+  "raw_url": "https://huggingface.co/apple/OpenELM-3B-Instruct/raw/main/README.md"
 }
 ```
 
