@@ -30,8 +30,17 @@ async function compileData() {
 
 async function compileReferencedValuesData() {
   console.log("Compiling insights data...");
-  //TODO: Implement this function to compile insights according to RVCollection interface
-  return JSON.stringify([]);
+  
+  const pattern = "../data/referenced_values/insights.json";
+
+  const filePath = join(process.cwd(), pattern);
+
+  if (existsSync(filePath)) {
+    const fileData = await readFile(filePath, "utf8");
+    return fileData;
+  } else {
+    throw new Error("Insights data file not found");
+  }
 }
 
 async function compileLLMData() {

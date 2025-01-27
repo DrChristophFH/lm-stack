@@ -1,1 +1,161 @@
-[]
+{
+  "companies": {
+    "apple": {
+      "name": "Apple",
+      "url": "https://machinelearning.apple.com/",
+      "logo": "apple.svg"
+    },
+    "qwenlm": {
+      "name": "Qwen",
+      "url": "https://qwenlm.github.io/",
+      "logo": "qwen.svg"
+    },
+    "01.ai": {
+      "name": "01.AI",
+      "url": "https://www.01.ai/",
+      "logo": "01-ai.webp"
+    }
+  },
+  "hints": {
+    "usage_type": {
+      "gp-llm": {
+        "name": "GP-LLM",
+        "description": "A general purpose language model that is trained on a diverse range of tasks and datasets."
+      },
+      "code-llm": {
+        "name": "Code-LLM",
+        "description": "A language model that is specifically trained on code-related tasks and datasets."
+      }
+    },
+    "model": {
+      "architecture": {
+        "transformer": {
+          "name": "Transformer",
+          "description": "The Transformer is a deep learning model introduced in 2017, used primarily in the field of natural language processing (NLP).",
+          "url": "https://arxiv.org/abs/1706.03762"
+        }
+      },
+      "subtype": {
+        "decoder-only": {
+          "name": "Decoder-Only Transformer",
+          "description": "A transformer model that only uses the decoder part of the transformer architecture.",
+          "url": "https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf"
+        },
+        "encoder-decoder": {
+          "name": "Encoder-Decoder Transformer",
+          "description": "The standard transformer model that uses both the encoder and decoder parts of the transformer architecture.",
+          "url": "https://arxiv.org/abs/1706.03762"
+        }
+      },
+      "insights": {
+        "layer-wise-scaling": {
+          "name": "Layer-wise Scaling",
+          "description": "Non-uniform allocation of parameters in the transformer layer. Adjusted number of attention heads and FFN multiplier in each transformer layer.",
+          "url": "https://arxiv.org/abs/2404.14619",
+          "color": "teal-800"
+        },
+        "flash-attention": {
+          "name": "Flash Attention",
+          "description": "Flash Attention is an attention algorithm used to reduce the memory bottleneck in transformers.",
+          "url": "https://arxiv.org/abs/2205.14135",
+          "color": "yellow-300"
+        },
+        "moe": {
+          "name": "Mixture of Experts",
+          "description": "Mixture of Experts is a technique in AI where a set of specialized models (experts) are collectively orchestrated by a gating mechanism to handle different parts of the input space, optimizing for performance and efficiency.",
+          "url": "https://en.wikipedia.org/wiki/Mixture_of_experts",
+          "color": "emerald-600"
+        },
+        "multimodal": {
+          "name": "Multimodal Transformer",
+          "description": "A transformer model that is designed to handle multiple modalities of data, such as text, images, and audio.",
+          "color": "purple-600"
+        },
+        "yarn": {
+          "name": "YaRN",
+          "description": "YaRN (Yet another RoPE extensioN method), a compute-efficient method to extend the context window of RoPE models.",
+          "url": "https://arxiv.org/abs/2309.00071",
+          "color": "stone-300"
+        }
+      },
+      "tokenizer": {
+        "sentencepiece": {
+          "name": "SentencePiece",
+          "description": "A language-independent subword tokenizer and detokenizer designed for Neural-based text processing.",
+          "url": "https://arxiv.org/abs/1808.06226"
+        }
+      },
+      "positional_embedding": {
+        "rope": {
+          "name": "RoPE",
+          "description": "RoPE is a positional encoding that is designed to be more robust to sequence length variations.",
+          "url": "https://arxiv.org/abs/2104.09864"
+        },
+        "learned": {
+          "name": "Learned Positional Embedding",
+          "description": "Learned positional embeddings are embeddings that are learned during the training process.",
+          "url": "https://arxiv.org/abs/1705.03122"
+        },
+        "sinusoidal": {
+          "name": "Sinusoidal Positional Embedding",
+          "description": "Sinusoidal positional embeddings are fixed embeddings that are based on sine and cosine functions.",
+          "url": "https://arxiv.org/abs/1706.03762"
+        },
+        "decoupled-rope": {
+          "name": "Decoupled RoPE",
+          "description": "Decoupled RoPE uses additional multi-head queries and a shared key to carry RoPE. Needed for MLA.",
+          "url": "https://arxiv.org/abs/2405.04434"
+        }
+      },
+      "attention_variant": {
+        "scaled-dot-product": {
+          "name": "Scaled Dot-Product Attention",
+          "description": "Scaled Dot-Product Attention is the standard attention mechanism used in transformers.",
+          "url": "https://arxiv.org/abs/1706.03762"
+        },
+        "multi-head": {
+          "name": "Multi-Head Attention (MHA)",
+          "description": "Multi-Head Attention is an extension of the scaled dot-product attention where the attention mechanism is applied multiple times in parallel.",
+          "url": "https://arxiv.org/abs/1706.03762"
+        },
+        "grouped-query": {
+          "name": "Grouped Query Attention (GQA)",
+          "description": "Grouped Query Attention is the generalization of multi-query attention with more flexible query head configurations.",
+          "url": "https://arxiv.org/abs/2305.13245"
+        },
+        "multi-query": {
+          "name": "Multi-Query Attention (MQA)",
+          "description": "Multi-query attention shares the keys and values across all of the different attention heads",
+          "url": "https://arxiv.org/abs/1911.02150"
+        },
+        "multi-head-latent": {
+          "name": "Multi-Head Latent Attention (MLA)",
+          "description": "Multi-Head Latent Attention utilizes low-rank key-value joint compression to eliminate the bottleneck of inference-time key-value cache",
+          "url": "https://arxiv.org/abs/2405.04434"
+        }
+      },
+      "activation": {
+        "relu": {
+          "name": "ReLU",
+          "description": "ReLU (Rectified Linear Unit) is the most commonly used activation function in deep learning models.",
+          "url": "https://en.wikipedia.org/wiki/Rectifier_(neural_networks)"
+        },
+        "gelu": {
+          "name": "GELU",
+          "description": "GELU (Gaussian Error Linear Unit) is an activation function that is used in transformers.",
+          "url": "https://arxiv.org/abs/1606.08415"
+        },
+        "swiglu": {
+          "name": "Swish-Gated GELU",
+          "description": "Swish-Gated GELU is an activation function that combines the Swish and GELU activation functions.",
+          "url": "https://arxiv.org/abs/2002.05202"
+        },
+        "silu": {
+          "name": "SiLU",
+          "description": "SiLU (Sigmoid-weighted Linear Unit) is an activation function that is used in transformers.",
+          "url": "https://arxiv.org/abs/1606.08415"
+        }
+      }
+    }
+  }
+}
