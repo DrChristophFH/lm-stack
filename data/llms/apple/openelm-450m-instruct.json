@@ -3,11 +3,11 @@
   "name": "OpenELM-450M-Instruct",
   "derives_from": "apple/openelm-450m",
   "readme": {
-    "link": "https://huggingface.co/apple/OpenELM-450M-Instruct/blob/main/README.md",
-    "raw": "https://huggingface.co/apple/OpenELM-450M-Instruct/raw/main/README.md"
+    "url": "https://huggingface.co/apple/OpenELM-450M-Instruct/blob/main/README.md",
+    "raw_url": "https://huggingface.co/apple/OpenELM-450M-Instruct/raw/main/README.md"
   },
   "license_url": "https://huggingface.co/apple/OpenELM-450M-Instruct/blob/main/LICENSE",
-  "download": "https://huggingface.co/apple/OpenELM-450M-Instruct",
-  "paper": "https://arxiv.org/pdf/2404.14619",
+  "download_url": "https://huggingface.co/apple/OpenELM-450M-Instruct",
+  "paper_url": "https://arxiv.org/pdf/2404.14619",
   "updated": "2025-01-27"
 }

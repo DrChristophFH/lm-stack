@@ -4,10 +4,11 @@
   "release_date": "2024-04-22",
   "from": "apple",
   "usage_type": "GP-LLM",
+  "family": "OpenELM",
   "description": "",
   "readme": {
-    "link": "https://huggingface.co/apple/OpenELM-450M/blob/main/README.md",
-    "raw": "https://huggingface.co/apple/OpenELM-450M/raw/main/README.md"
+    "url": "https://huggingface.co/apple/OpenELM-450M/blob/main/README.md",
+    "raw_url": "https://huggingface.co/apple/OpenELM-450M/raw/main/README.md"
   },
   "model": {
     "architecture": "transformer",
@@ -29,10 +30,10 @@
   "training": {
     "tokens": "1.8T"
   },
-  "license": "Apple-sample-code-license",
+  "license_type": "Apple-sample-code-license",
   "license_url": "https://huggingface.co/apple/OpenELM-450M/blob/main/LICENSE",
-  "download": "https://huggingface.co/apple/OpenELM-450M",
-  "paper": "https://arxiv.org/pdf/2404.14619",
+  "download_url": "https://huggingface.co/apple/OpenELM-450M",
+  "paper_url": "https://arxiv.org/pdf/2404.14619",
   "bonus": [
     {
       "type": "repo",
@@ -40,6 +41,5 @@
       "url": "https://github.com/apple/corenet"
     }
   ],
-  "updated": "2024-05-25",
-  "family": "OpenELM"
+  "updated": "2024-05-25"
 }

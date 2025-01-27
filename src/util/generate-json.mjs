@@ -35,7 +35,7 @@ async function compileReferencedValuesData() {
 }
 
 async function compileLLMData() {
-  const pattern = "../data/llm/**/*.json";
+  const pattern = "../data/llms/**/*.json";
   const files = await glob(pattern);
   const parsed_files = [];
   const llms = [];
@@ -54,7 +54,7 @@ async function compileLLMData() {
 
     // merge llm with base llm it derives from
     if (llm.derives_from) {
-      const parentLLM = llms.find((llm) => llm.id === llm.derives_from);
+      const parentLLM = llms.find((search_llm) => search_llm.id === llm.derives_from.toLowerCase());
 
       if (parentLLM) {
         llm = deepCopyAndMerge(parentLLM, llm);
@@ -122,7 +122,7 @@ function deepCopyAndMerge(original, overrides) {
  * @param {*} llm The LLM data to validate and sanitize
  */
 function validateAndSanitizeLLMData(llm) {
-  validateField(llm, "id", "string");
+  validateField(llm, "id", "string", false, (id) => id.toLowerCase());
   validateField(llm, "name", "string");
   popFieldIfPresent(llm, "derives_from");
   validateField(llm, "family", "string");
@@ -134,9 +134,9 @@ function validateAndSanitizeLLMData(llm) {
     llm, "readme",
     (readme) => {
       validateField(readme, "url", "string");
-      validateField(readme, "raw_url", "string", (optional = true));
+      validateField(readme, "raw_url", "string", true);
     },
-    (optional = true)
+    true
   );
   validateObjectField(llm, "model", (model) => {
     validateField(model, "architecture", "string");
@@ -146,23 +146,23 @@ function validateAndSanitizeLLMData(llm) {
         throw new Error("Insight must be a string");
       }
     });
-    validateField(model, "parameters", "number", (transform = parametersToNumber));
-    validateField(model, "active_parameters", "number", (optional = true), (transform = parametersToNumber));
-    validateField(model, "context_size", "number", (transform = parametersToNumber));
+    validateField(model, "parameters", "number", false, parametersToNumber);
+    validateField(model, "active_parameters", "number", true, parametersToNumber);
+    validateField(model, "context_size", "number", false, parametersToNumber);
     validateField(model, "tokenizer", "string");
-    validateField(model, "hidden_size", "number", (transform = parametersToNumber));
-  validateField(model, "vocab_size", "number",   (transform = parametersToNumber));
+    validateField(model, "hidden_size", "number", false, parametersToNumber);
+    validateField(model, "vocab_size", "number", false, parametersToNumber);
     validateField(model, "positional_embedding", "string");
     validateField(model, "attention_variant", "string");
     validateField(model, "activation", "string");
   });
   validateObjectField(llm, "training", (training) => {
-    validateField(training, "tokens", "number", (transform = parametersToNumber));
+    validateField(training, "tokens", "number", false, parametersToNumber);
   });
   validateField(llm, "license_type", "string");
-  validateField(llm, "license_url", "string", (optional = true));
-  validateField(llm, "download_url", "string", (optional = true));
-  validateField(llm, "paper_url", "string", (optional = true));
+  validateField(llm, "license_url", "string", true);
+  validateField(llm, "download_url", "string", true);
+  validateField(llm, "paper_url", "string", true);
   validateArrayField(
     llm, "bonus",
     (bonus) => {
@@ -170,9 +170,9 @@ function validateAndSanitizeLLMData(llm) {
       validateField(bonus, "title", "string");
       validateField(bonus, "url", "string");
     },
-    (optional = true)
+    true
   );
-  validateField(llm, "logo_file", "string", (optional = true));
+  validateField(llm, "logo_file", "string", true);
   validateField(llm, "updated", "string");
 }
 
@@ -242,8 +242,8 @@ function validateField(object, field, type, optional = false, transform = (x) =>
 
   object[field] = transform(object[field]);
 
-  if (typeof object[field] !== type) {
-    throw new Error(`Field ${field} is not of type ${type}`);
+  if (object[field] !== undefined && typeof object[field] !== type) {
+    throw new Error(`Field ${field} is not of type ${type} (got ${typeof object[field]})`);
   }
 }
 
