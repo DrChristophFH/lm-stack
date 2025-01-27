@@ -1,4 +1,4 @@
-import { Insights } from "@/lib/types/insights";
+import { Insights } from "@/lib/types/referenced-values";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card";
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";

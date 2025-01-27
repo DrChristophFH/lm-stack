@@ -11,8 +11,18 @@ import { cn } from "@/lib/utils";
 import { Icons } from "../ui/icons";
 import { siteConfig } from "@/config/site";
 import { ModeToggle } from "../mode-toggle";
+import { AutoComplete, type Option } from "../autocomplete";
+import { LLM } from "@/lib/types/llm";
+import { useState } from "react";
 
-export function Header() {
+interface Props {
+  llms: LLM[];
+  selectCallback: (llm: LLM) => void;
+}
+
+export function Header({ llms, selectCallback }: Props) {
+  const [value, setValue] = useState<Option>()
+
   return (
     <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 z-20">
       <nav className="flex items-center space-x-1">
@@ -23,12 +33,21 @@ export function Header() {
       </nav>
       <div className="flex items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
         <ModeToggle />
-        <form className="ml-auto flex-1 sm:flex-initial">
-          <div className="relative">
-            <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input type="search" placeholder="Search for a specific LLM..." className="pl-8 sm:w-[300px] md:w-[200px] lg:w-[500px]" />
-          </div>
-        </form>
+        <AutoComplete
+          options={llms.map((llm) => ({
+            value: llm.id,
+            label: llm.name,
+          }))}
+          emptyMessage="No resulsts."
+          placeholder="Find something"
+          onValueChange={(value) => {
+            setValue(value)
+            let llm = llms.find((llm) => llm.id === value?.value)
+            if (llm) selectCallback(llm)
+          }}
+          isLoading={llms.length === 0}
+          value={value}
+        />
       </div>
       <ProposeModel />
       <nav className="flex items-center">
